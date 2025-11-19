@@ -11,7 +11,9 @@
 .logo-container {
   margin-bottom: 8.56rem;
 }
-
+.login-container .form-container .header{
+  margin-bottom: 5rem;
+}
 .login-container .form-container .header h1 {
   color: #333333;
   font-weight: 500;

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- login style  -->
+    <link rel="stylesheet" href="./css/register.css" />
+
+    <!-- font IBM Plex Sans Arabic -->
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
+
+    <!-- font Poppins -->
+    <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
+
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css"
+    />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="container-fluid register-container">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-md-12 px-0 logo-container">
+          <img
+            loading="lazy"
+            src="./images/logo.svg"
+            alt="Quick Supply logo"
+            width="309"
+          />
+        </div>
+
+        <!-- Center form + stepper -->
+        <div class="col-md-12 form-wrapper ">
+          <div class="header">
+            <h1>Create an account</h1>
+            <p class="subtitle">
+              Already have an account?
+              <a href="./login.html">Log in</a>
+            </p>
+          </div>
+
+          <!-- Stepper -->
+          <ul class="stepper" id="stepper">
+            <li class="step active" data-step="1">
+              <div class="step-inner">
+                <div class="step-circle">1</div>
+                <div class="step-label">Enter your email adress</div>
+              </div>
+            </li>
+            <li class="step" data-step="2">
+              <div class="step-inner">
+                <div class="step-circle">2</div>
+                <div class="step-label">Provide your basic info</div>
+              </div>
+            </li>
+            <li class="step" data-step="3">
+              <div class="step-inner">
+                <div class="step-circle">3</div>
+                <div class="step-label">Provide your Origin info</div>
+              </div>
+            </li>
+            <li class="step" data-step="4">
+              <div class="step-inner">
+                <div class="step-circle">4</div>
+                <div class="step-label">Create your password</div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Form -->
+          <form id="stepForm">
+            <!-- Step 1 -->
+            <div class="step-content" data-step-content="1">
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+
+              <button type="button" class="btn-next" id="nextBtn">Next</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+              class="step-content"
+              data-step-content="2"
+              style="display: none"
+            >
+              <div class="mb-3">
+                <label class="form-label">Full name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="+20 100 000 0000"
+                />
+              </div>
+
+              <div class="actions-row">
+                <button type="button" class="btn-prev" data-prev>← Back</button>
+                <button type="button" class="btn-next" data-next>Next</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="step-content"
+              data-step-content="3"
+              style="display: none"
+            >
+              <div class="mb-3">
+                <label class="form-label">Country</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Country of origin"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">City</label>
+                <input type="text" class="form-control" placeholder="City" />
+              </div>
+
+              <div class="actions-row">
+                <button type="button" class="btn-prev" data-prev>← Back</button>
+                <button type="button" class="btn-next" data-next>Next</button>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div
+              class="step-content"
+              data-step-content="4"
+              style="display: none"
+            >
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Create a password"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Confirm password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Confirm your password"
+                />
+              </div>
+
+              <div class="actions-row">
+                <button type="button" class="btn-prev" data-prev>← Back</button>
+                <button type="submit" class="btn-next">Create account</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (لوكال عندك) -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+
+    <script>
+      const steps = document.querySelectorAll(".step");
+      const contents = document.querySelectorAll("[data-step-content]");
+      let currentStep = 1;
+
+      function updateStepper() {
+        steps.forEach((step) => {
+          const stepNum = parseInt(step.getAttribute("data-step"), 10);
+          step.classList.remove("active", "completed");
+          if (stepNum < currentStep) {
+            step.classList.add("completed");
+          } else if (stepNum === currentStep) {
+            step.classList.add("active");
+          }
+        });
+
+        contents.forEach((content) => {
+          const stepNum = parseInt(
+            content.getAttribute("data-step-content"),
+            10
+          );
+          content.style.display = stepNum === currentStep ? "block" : "none";
+        });
+      }
+
+      // أول Next في Step 1
+      document.getElementById("nextBtn").addEventListener("click", function () {
+        currentStep = 2;
+        updateStepper();
+      });
+
+      // بقية الأزرار Next / Back
+      document.querySelectorAll("[data-next]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep < 4) {
+            currentStep++;
+            updateStepper();
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-prev]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep > 1) {
+            currentStep--;
+            updateStepper();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

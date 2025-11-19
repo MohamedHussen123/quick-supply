@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
     <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
     <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
+
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container-fluid login-container">
@@ -35,7 +41,7 @@
           />
         </div>
         <div class="col-md-12 form-container">
-          <div class="header d-flex flex-column align-items-center mb-4">
+          <div class="header d-flex flex-column align-items-center">
             <h1>Login with your <span>email</span></h1>
             <p>Don’t have an ccount ? <a href="./register.html">Sign up </a></p>
           </div>
@@ -67,7 +73,7 @@
                       placeholder="********"
                     />
                     <i
-                      class="bi bi-eye toggle-eye"
+                      class="fa-regular fa-eye toggle-eye"
                       data-target="passwordFieldEmail"
                     ></i>
                   </div>
@@ -94,9 +100,10 @@
                       id="passwordFieldPhone"
                       placeholder="********"
                     />
+
                     <i
-                      class="bi bi-eye toggle-eye"
-                      data-target="passwordFieldPhone"
+                      class="fa-regular fa-eye toggle-eye"
+                      data-target="passwordFieldEmail"
                     ></i>
                   </div>
 
@@ -117,14 +124,18 @@
     <script src="./js/popper.min.js"></script>
 
     <script>
-      // toggle show/hide password
       document.querySelectorAll(".toggle-eye").forEach((icon) => {
         icon.addEventListener("click", () => {
           const targetId = icon.getAttribute("data-target");
           const field = document.getElementById(targetId);
           if (!field) return;
 
-          field.type = field.type === "password" ? "text" : "password";
+          const isPassword = field.type === "password";
+          field.type = isPassword ? "text" : "password";
+
+          // بدّل شكل الآيكون
+          icon.classList.toggle("fa-eye");
+          icon.classList.toggle("fa-eye-slash");
         });
       });
 

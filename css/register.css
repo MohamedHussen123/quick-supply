@@ -1,0 +1,207 @@
+:root {
+  --primary-color: #196480;
+  --muted-color: #333333;
+  --text-muted: #8b8f97;
+
+  --ibm-plex-sans-arabic: "IBM Plex Sans Arabic", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+}
+.register-container {
+  padding: 2.75rem 3.75rem;
+}
+
+.logo-container {
+  margin-bottom: 8.56rem;
+}
+
+/* Center card */
+.form-wrapper {
+  max-width: 720px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+.form-wrapper .header {
+  margin-bottom: 5rem;
+}
+.form-wrapper h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  font-family: var(--ibm-plex-sans-arabic);
+}
+
+.form-wrapper .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--ibm-plex-sans-arabic);
+  color: var(--muted-color);
+}
+
+.form-wrapper .subtitle a {
+  color: #111;
+
+  font-weight: 400;
+}
+
+.form-wrapper .subtitle a:hover {
+  text-decoration: underline;
+}
+
+/* Stepper */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 0 12px;
+  list-style: none;
+  gap: 50px;
+}
+
+.step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: #196480;
+  z-index: 0;
+}
+
+.step-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: #999999;
+  border: 2px solid #999;
+  color: #fff;
+}
+
+.step-label {
+  font-size: 16px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-family: var(--poppins);
+}
+
+.step.active .step-circle {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.step.completed .step-circle {
+  border-color: var(--primary-color);
+  background: #ffffff;
+  color: var(--primary-color);
+}
+
+.step.active .step-label {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.step.completed .step-label {
+  color: #4b5563;
+}
+
+.step.completed::after {
+  background: var(--primary-color);
+}
+
+/* Form content */
+.step-content {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 999px;
+  height: 50px;
+  padding-inline: 18px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.form-control::placeholder {
+  color: #c4c9d2;
+}
+
+.btn-next,
+.btn-prev {
+  border-radius: 999px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-next {
+  background: var(--primary-color);
+  color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-prev {
+  background: transparent;
+  color: var(--primary-color);
+  padding-inline: 16px;
+}
+
+.btn-next:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px 16px;
+  }
+
+  .step-label {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .step:not(:last-child)::after {
+    right: -40%;
+  }
+}
