@@ -1,0 +1,118 @@
+:root {
+  --ibm-plex-sans-arabic: "IBM Plex Sans Arabic", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+}
+
+.login-container {
+  padding: 2.75rem 3.75rem;
+}
+.logo-container {
+  margin-bottom: 8.56rem;
+}
+
+.login-container .form-container .header h1 {
+  color: #333333;
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: var(--ibm-plex-sans-arabic);
+}
+.login-container .form-container .header p {
+  font-weight: 400;
+  font-family: var(--poppins);
+  font-size: 14px;
+  color: #333333;
+}
+.login-container .form-container .header p a {
+  color: #111111;
+  font-size: 16px;
+}
+.login-wrapper {
+  max-width: 703px;
+  margin: auto;
+}
+
+/* Top Tabs */
+.custom-tabs {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.custom-tabs button {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background: #ffffff;
+  font-weight: 400;
+  border-radius: 12px;
+  border: 1px solid #f0eff9;
+  font-size: 14px;
+  font-family: var(--poppins);
+}
+
+.custom-tabs .active {
+  background: #196480;
+  color: white;
+}
+
+/* Labels */
+.form-label {
+  font-family: var(--poppins);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #475467;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 12px;
+  height: 52px;
+  padding-left: 14px;
+  font-size: 14px;
+  border: 1px solid #f0eff9;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #196480;
+}
+/* Password eye */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Forget password */
+.forgot-link {
+  color: #1570ef;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-next {
+  width: 100%;
+  height: 50px;
+  border-radius: 16px;
+  background: #196480;
+  color: white;
+  border: none;
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  box-shadow: 0px 1px 2px 0px #38ACB10D;
+}
