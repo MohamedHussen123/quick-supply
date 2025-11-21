@@ -29,11 +29,15 @@
       href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css"
     />
 
-    <style></style>
+    <!-- Select2 -->
+    <link href="./css/select2.min.css" rel="stylesheet" />
+
+    <!-- Stepper css -->
+    <link rel="stylesheet" href="./css/stepper.css" />
   </head>
   <body>
     <div class="container-fluid register-container">
-      <div class="row">
+      <div class="row mb-5">
         <!-- Logo -->
         <div class="col-md-12 px-0 logo-container">
           <img
@@ -43,9 +47,11 @@
             width="309"
           />
         </div>
+      </div>
 
+      <div class="row">
         <!-- Center form + stepper -->
-        <div class="col-md-12 form-wrapper ">
+        <div class="col-md-10 form-wrapper">
           <div class="header">
             <h1>Create an account</h1>
             <p class="subtitle">
@@ -54,192 +60,311 @@
             </p>
           </div>
 
-          <!-- Stepper -->
-          <ul class="stepper" id="stepper">
-            <li class="step active" data-step="1">
-              <div class="step-inner">
-                <div class="step-circle">1</div>
-                <div class="step-label">Enter your email adress</div>
-              </div>
-            </li>
-            <li class="step" data-step="2">
-              <div class="step-inner">
-                <div class="step-circle">2</div>
-                <div class="step-label">Provide your basic info</div>
-              </div>
-            </li>
-            <li class="step" data-step="3">
-              <div class="step-inner">
-                <div class="step-circle">3</div>
-                <div class="step-label">Provide your Origin info</div>
-              </div>
-            </li>
-            <li class="step" data-step="4">
-              <div class="step-inner">
-                <div class="step-circle">4</div>
-                <div class="step-label">Create your password</div>
-              </div>
-            </li>
-          </ul>
-
-          <!-- Form -->
-          <form id="stepForm">
-            <!-- Step 1 -->
-            <div class="step-content" data-step-content="1">
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="example@gmail.com"
-                  required
-                />
+          <div id="stepper" class="bs-stepper">
+            <div class="bs-stepper-header" role="tablist">
+              <div class="step" data-target="#step-1">
+                <button type="button" class="step-trigger" role="tab">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">Enter your email adress</span>
+                </button>
               </div>
 
-              <button type="button" class="btn-next" id="nextBtn">Next</button>
-            </div>
+              <div class="line"></div>
 
-            <!-- Step 2 -->
-            <div
-              class="step-content"
-              data-step-content="2"
-              style="display: none"
-            >
-              <div class="mb-3">
-                <label class="form-label">Full name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your full name"
-                />
+              <div class="step" data-target="#step-2">
+                <button type="button" class="step-trigger" role="tab">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Provide your basic info</span>
+                </button>
               </div>
 
-              <div class="mb-3">
-                <label class="form-label">Phone number</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="+20 100 000 0000"
-                />
+              <div class="line"></div>
+
+              <div class="step" data-target="#step-3">
+                <button type="button" class="step-trigger" role="tab">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label">Provide your Origin info</span>
+                </button>
               </div>
 
-              <div class="actions-row">
-                <button type="button" class="btn-prev" data-prev>← Back</button>
-                <button type="button" class="btn-next" data-next>Next</button>
+              <div class="line"></div>
+
+              <div class="step" data-target="#step-4">
+                <button type="button" class="step-trigger" role="tab">
+                  <span class="bs-stepper-circle">4</span>
+                  <span class="bs-stepper-label">Create your password</span>
+                </button>
               </div>
             </div>
 
-            <!-- Step 3 -->
-            <div
-              class="step-content"
-              data-step-content="3"
-              style="display: none"
-            >
-              <div class="mb-3">
-                <label class="form-label">Country</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Country of origin"
-                />
+            <div class="bs-stepper-content">
+              <!-- ========== STEP 1: Email ========== -->
+              <div id="step-1" class="content" role="tabpanel">
+                <div class="step-content-inner">
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="example@gmail.com"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn-main"
+                    onclick="stepper.next()"
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
 
-              <div class="mb-3">
-                <label class="form-label">City</label>
-                <input type="text" class="form-control" placeholder="City" />
+              <!-- ========== STEP 2: Basic Info ========== -->
+              <div id="step-2" class="content" role="tabpanel">
+                <div class="step-content-inner">
+                  <div class="row g-3 mb-2">
+                    <div class="col-md-6">
+                      <label class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Your name"
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="form-label">Phone number</label>
+
+                      <div class="phone-wrapper">
+                        <select class="country-select phone-select js-select2">
+                          <option value="+1" data-short="US">US</option>
+                          <option value="+20" data-short="EG">EG</option>
+                          <option value="+966" data-short="SA">SA</option>
+                          <option value="+971" data-short="AE">AE</option>
+                        </select>
+
+                        <input
+                          type="tel"
+                          class="phone-input"
+                          placeholder="+1 (555) 000-0000"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Country</label>
+                    <select class="form-select js-select">
+                      <option selected disabled>Select Country</option>
+                      <option value="eg">Egypt</option>
+                      <option value="sa">Saudi Arabia</option>
+                      <option value="ae">United Arab Emirates</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">State</label>
+                    <select class="form-select js-select state-select">
+                      <option disabled selected>Select State</option>
+                      <option value="cairo">Cairo</option>
+                      <option value="giza">Giza</option>
+                      <option value="alex">Alexandria</option>
+                      <option value="luxor">Luxor</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Location</label>
+                    <select class="form-select js-select location-select">
+                      <option disabled selected>Select Location</option>
+                      <option value="cairo">Cairo</option>
+                      <option value="giza">Giza</option>
+                      <option value="alex">Alexandria</option>
+                      <option value="luxor">Luxor</option>
+                    </select>
+                  </div>
+
+                  <div class="actions-row">
+                    <button
+                      type="button"
+                      class="btn-main"
+                      onclick="stepper.next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
               </div>
 
-              <div class="actions-row">
-                <button type="button" class="btn-prev" data-prev>← Back</button>
-                <button type="button" class="btn-next" data-next>Next</button>
+              <!-- ========== STEP 3: Origin Info ========== -->
+              <div id="step-3" class="content" role="tabpanel">
+                <div class="step-content-inner">
+                  <div class="row g-3 mb-2">
+                    <div class="col-md-6">
+                      <label class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Type origin</label>
+                      <select class="form-select">
+                        <option selected disabled>Origin type</option>
+                        <option>Factory</option>
+                        <option>Distributor</option>
+                        <option>Pharmacy</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Commercial register</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Commercial"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Commercial number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Commercial num"
+                    />
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="termsCheck"
+                    />
+                    <label class="form-check-label terms-text" for="termsCheck">
+                      I accept to <a href="#">terms and conditions</a>
+                    </label>
+                  </div>
+
+                  <div class="actions-row">
+                    <button
+                      type="button"
+                      class="btn-main"
+                      onclick="stepper.next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ========== STEP 4: Password ========== -->
+              <div id="step-4" class="content" role="tabpanel">
+                <div class="step-content-inner">
+                  <div class="row g-3 mb-2">
+                    <div class="col-md-6">
+                      <label class="form-label">Password</label>
+                      <div class="password-wrapper">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          placeholder="Password"
+                        />
+                        <i
+                          class="fa-regular fa-eye toggle-eye"
+                          data-target="password"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Confirm password</label>
+                      <div class="password-wrapper">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="confirmPassword"
+                          placeholder="Password"
+                        />
+                        <i
+                          class="fa-regular fa-eye toggle-eye"
+                          data-target="confirmPassword"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="actions-row">
+                    <button type="submit" class="btn-main">Confirm</button>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <!-- Step 4 -->
-            <div
-              class="step-content"
-              data-step-content="4"
-              style="display: none"
-            >
-              <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Create a password"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label">Confirm password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Confirm your password"
-                />
-              </div>
-
-              <div class="actions-row">
-                <button type="button" class="btn-prev" data-prev>← Back</button>
-                <button type="submit" class="btn-next">Create account</button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Bootstrap JS (لوكال عندك) -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS  -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/popper.min.js"></script>
 
+    <!-- Select2 JS -->
+    <script src="./js/select2.min.js"></script>
+    <!-- Stepper JS -->
+    <script src="./js/stepper.js"></script>
     <script>
-      const steps = document.querySelectorAll(".step");
-      const contents = document.querySelectorAll("[data-step-content]");
-      let currentStep = 1;
-
-      function updateStepper() {
-        steps.forEach((step) => {
-          const stepNum = parseInt(step.getAttribute("data-step"), 10);
-          step.classList.remove("active", "completed");
-          if (stepNum < currentStep) {
-            step.classList.add("completed");
-          } else if (stepNum === currentStep) {
-            step.classList.add("active");
-          }
+      document.addEventListener("DOMContentLoaded", function () {
+        window.stepper = new Stepper(document.querySelector("#stepper"), {
+          linear: false,
+          animation: false,
         });
-
-        contents.forEach((content) => {
-          const stepNum = parseInt(
-            content.getAttribute("data-step-content"),
-            10
-          );
-          content.style.display = stepNum === currentStep ? "block" : "none";
+        // Select2 init
+        $(".js-select").select2({
+          minimumResultsForSearch: -1, // يشيل السيرش
+          width: "100%", // يخلي العرض كامل
         });
-      }
+        document.querySelectorAll(".toggle-eye").forEach((icon) => {
+          icon.addEventListener("click", () => {
+            const targetId = icon.getAttribute("data-target");
+            const field = document.getElementById(targetId);
+            if (!field) return;
 
-      // أول Next في Step 1
-      document.getElementById("nextBtn").addEventListener("click", function () {
-        currentStep = 2;
-        updateStepper();
-      });
+            const isPassword = field.type === "password";
+            field.type = isPassword ? "text" : "password";
 
-      // بقية الأزرار Next / Back
-      document.querySelectorAll("[data-next]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          if (currentStep < 4) {
-            currentStep++;
-            updateStepper();
-          }
+            icon.classList.toggle("fa-eye");
+            icon.classList.toggle("fa-eye-slash");
+          });
         });
-      });
+        $(".country-key-select").select2({
+          width: "120px",
 
-      document.querySelectorAll("[data-prev]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          if (currentStep > 1) {
-            currentStep--;
-            updateStepper();
-          }
+          templateResult: function (data) {
+            if (!data.id) return data.text;
+
+            let flag = $(data.element).data("flag");
+            let short = $(data.element).data("short");
+            let code = data.id;
+
+            // What appears in the dropdown list
+            return $(`<span>${flag} ${short} ${code}</span>`);
+          },
+
+          templateSelection: function (data) {
+            if (!data.id) return data.text;
+
+            // Only abbreviation in selected item
+            let short = $(data.element).data("short");
+            return $(`<span>${short}</span>`);
+          },
         });
       });
     </script>
