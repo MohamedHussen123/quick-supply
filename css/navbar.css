@@ -1,0 +1,144 @@
+:root {
+  --main-bg: #09232D;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+header {
+  background-color: var(--main-bg);
+  color: #ffffff;
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+  font-size: 13px;
+  color: var(--text-muted-top);
+}
+
+.top-bar a {
+  color: var(--text-muted-top);
+  text-decoration: none;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Main Navbar ---------- */
+.main-navbar {
+  background-color: var(--main-bg);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.navbar-brand span.small-text {
+  font-size: 12px;
+  color: #f3a622;
+  text-transform: lowercase;
+}
+
+.navbar-brand img {
+  height: 42px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 15px;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--accent);
+}
+
+/* Add order button */
+.btn-add-order {
+  background-color: #ffffff;
+  color: var(--main-bg);
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 0.4rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+}
+
+.btn-add-order:hover {
+  background-color: #f1f1f1;
+  color: var(--main-bg);
+}
+
+/* Icons group */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.nav-icons .icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-icons .icon-wrapper:hover {
+  color: var(--accent);
+}
+
+.nav-icons .cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ffffff;
+  color: var(--main-bg);
+  border-radius: 999px;
+  font-size: 10px;
+  padding: 0 4px;
+  border: 1px solid var(--main-bg);
+}
+
+/* Toggler */
+.navbar-toggler {
+  border-color: #ffffff33;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .top-bar .text-end {
+    text-align: left !important;
+    margin-top: 4px;
+  }
+
+  .navbar-nav {
+    margin-top: 0.75rem;
+  }
+
+  .nav-icons {
+    margin-top: 0.75rem;
+  }
+}

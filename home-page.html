@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- login style  -->
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+
+    <!-- font IBM Plex Sans Arabic -->
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
+
+    <!-- font Poppins -->
+    <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
+
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css"
+    />
+
+    <!-- Select2 -->
+    <link href="./css/select2.min.css" rel="stylesheet" />
+
+    <!-- Stepper css -->
+    <link rel="stylesheet" href="./css/stepper.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Top Bar -->
+      <div
+        class="top-bar py-2 border-bottom border-secondary border-opacity-25"
+      >
+        <div class="container d-flex flex-wrap justify-content-between">
+          <div class="small">Welcome to Clicon online eCommerce store.</div>
+          <div class="small d-flex align-items-center gap-3">
+            <span>Follow us:</span>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <span class="ms-3">Eng</span>
+            <span>|</span>
+            <span>USD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navbar -->
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <!-- لو عندك لوجو حقيقي حط مساره هنا -->
+            <img src="./images/logo.svg" alt="Quick Supply Logo" />
+          </a>
+
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Nav Content -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- Center links -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Returns</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Invoices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Who are</a>
+              </li>
+            </ul>
+
+            <!-- Right side: Add order + icons -->
+            <div class="d-flex align-items-center gap-3 ms-lg-3 flex-wrap">
+              <button class="btn-add-order">
+                <i class="bi bi-plus-lg"></i>
+                <span>Add order</span>
+              </button>
+
+              <div class="nav-icons">
+                <span class="icon-wrapper">
+                  <i class="fa-regular fa-comments"></i>
+                </span>
+                <span class="icon-wrapper">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <span class="icon-wrapper">
+                  <i class="bi bi-bell"></i>
+                </span>
+                <span class="icon-wrapper">
+                  <i class="bi bi-heart"></i>
+                </span>
+                <span class="icon-wrapper">
+                  <i class="bi bi-cart"></i>
+                  <span class="cart-badge">2</span>
+                </span>
+                <span class="icon-wrapper">
+                  <i class="bi bi-person"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS  -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="./js/select2.min.js"></script>
+  </body>
+</html>
