@@ -1,12 +1,15 @@
 :root {
-  --main-bg: #09232D;
+  --main-bg: #09232d;
   --accent: #f3a622; /* لون اللينك النشط */
   --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
 }
 
 body {
   background-color: #f5f5f5;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 header {
@@ -16,8 +19,8 @@ header {
 
 /* ---------- Top Bar ---------- */
 .top-bar {
-  font-size: 13px;
-  color: var(--text-muted-top);
+  font-size: 14px;
+  color: #fff;
 }
 
 .top-bar a {
@@ -27,6 +30,51 @@ header {
 
 .top-bar a:hover {
   text-decoration: underline;
+}
+.top-bar .container .lang-currency span {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Wrapper for alignment */
+.custom-select-wrapper {
+  position: relative;
+}
+
+/* Topbar Select Style */
+.custom-select-topbar {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Arrow (like picture) */
+.custom-select-wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Remove focus ring */
+.custom-select-topbar:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Make options readable */
+.custom-select-topbar option {
+  color: #000;
 }
 
 /* ---------- Main Navbar ---------- */
@@ -52,14 +100,15 @@ header {
 }
 
 .navbar-brand img {
-  height: 42px;
+  height: 59px;
 }
 
 .navbar-nav .nav-link {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 0.9rem;
   padding-right: 0.9rem;
+  font-family: var(--poppins);
 }
 
 .navbar-nav .nav-link:hover {
@@ -72,15 +121,20 @@ header {
 
 /* Add order button */
 .btn-add-order {
-  background-color: #ffffff;
-  color: var(--main-bg);
-  border-radius: 999px;
+  background-color: #eff8ff;
+  color: #09232d;
+  border-radius: 8px;
+  font-weight: 500;
   font-size: 14px;
-  padding: 0.4rem 1.4rem;
+  padding: 10px 16px;
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 8px;
   border: none;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  font-family: var(--poppins);
+  min-width: 145px;
 }
 
 .btn-add-order:hover {
@@ -100,6 +154,10 @@ header {
 .nav-icons .icon-wrapper {
   position: relative;
   cursor: pointer;
+}
+.nav-icons .icon-wrapper .cart-icon {
+  font-size: 32px;
+  color: #ffffff;
 }
 
 .nav-icons .icon-wrapper:hover {
@@ -141,4 +199,226 @@ header {
   .nav-icons {
     margin-top: 0.75rem;
   }
+}
+
+/* ===== Add Order Offcanvas ===== */
+.offcanvas.offcanvas-end {
+  top: 18px;
+  right: 29px;
+  bottom: 20px;
+}
+.offcanvas-add-order {
+  width: 657px !important;
+  max-width: 100%;
+  border-radius: 24px;
+  padding: 24px 32px 28px;
+}
+
+/* نخلي الـ backdrop أغمق شوية زي الصورة */
+.offcanvas-backdrop.show {
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.offcanvas-add-order .offcanvas-header {
+  border-bottom: none;
+  padding-bottom: 12px;
+  position: relative;
+}
+.offcanvas-add-order .offcanvas-header button {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: -90px;
+  top: -16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offcanvas-add-order .offcanvas-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2e2d3c;
+  font-family: var(--poppins);
+  line-height: 30px;
+}
+
+/* زرار الـ X */
+.offcanvas-close-btn {
+  background-color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+
+/* نفس استايل الفورم اللي عاملينه في الريجيستر */
+.offcanvas-add-order .form-label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-family: var(--poppins);
+  color: #475467;
+}
+
+.offcanvas-add-order .form-control,
+.offcanvas-add-order .form-select {
+  border-radius: 12px;
+  padding: 14px 12px;
+  border: 1px solid #f0eff9;
+  font-size: 14px;
+
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+}
+
+.offcanvas-add-order .form-control:focus,
+.offcanvas-add-order .form-select:focus {
+  border-color: #196480;
+  box-shadow: none;
+}
+
+/* الأزرار تحت */
+.offcanvas-actions {
+  position: sticky;
+  bottom: 0;
+}
+
+.btn-upload-excel {
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+  padding: 12px 16px;
+}
+
+.btn-confirm {
+  border-radius: 16px;
+  background-color: #196480;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  padding: 12px 16px;
+}
+
+/* أيقونة الجرس */
+.notification-icon {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* صندوق النوتيفيكيشن */
+.notification-menu {
+  min-width: 383px;
+  max-width: 380px;
+  border-radius: 24px;
+  padding: 16px 18px 14px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px -2px #10182808;
+  box-shadow: 0px 12px 16px -4px #10182814;
+  margin-top: 10px; /* ينزل شوية تحت الأيقونة */
+}
+
+/* العنوان + See All */
+.notification-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  font-family: var(--nunito);
+}
+
+.notification-see-all {
+  font-size: 14px;
+  color: #196480;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: var(--nunito);
+}
+
+.notification-see-all:hover {
+  text-decoration: underline;
+}
+
+/* الليست */
+.notification-list {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-top: 6px;
+}
+
+/* item واحد */
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 2px;
+  margin-bottom: 6px;
+
+}
+.notification-item:not(:first-child) {
+  border-top:1px solid #e5e7eb ;
+}
+.notification-item:last-child {
+  margin-bottom: 0;
+}
+.notification-dropdown .dropdown-menu {
+  top: 158% !important;
+}
+.notification-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
+}
+
+/* النص جوه النوتيفيكيشن */
+.notification-text {
+  flex: 1;
+  
+}
+.notification-text p span.view-comment {
+  color: #196480;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.notification-text p {
+  margin-bottom: 2px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #333333;
+  font-family: var(--nunito);
+}
+
+/* لينك جوه النص (View Comment / Show Auction) */
+.notification-text p .fw-semibold,
+.notification-text p a {
+  color: #196480;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.notification-text p a:hover {
+  text-decoration: underline;
+}
+
+/* السطر التحت (الوقت أو وصف صغير) */
+.notification-time {
+  display: block;
+  font-size: 11px;
+  color: #98a2b3;
+  font-family: var(--nunito);
+}
+
+/* يخلي المينيو فوق الهيدر */
+.notification-dropdown .dropdown-menu {
+  z-index: 1100;
 }
