@@ -1,0 +1,626 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+/* start Slider style */
+
+.hero-slider {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: relative;
+  min-height: 542px;
+  padding: 45px 0px 60px 0;
+  display: flex;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 22px;
+  color: white;
+  background: conic-gradient(
+    from 41.21deg at 50.87% 53.43%,
+    #225476 -322.57deg,
+    #196480 0.4deg,
+    #225476 37.43deg,
+    #196480 360.4deg
+  );
+}
+.slide-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.slide-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: var(--nunito);
+}
+
+.slide-content span {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 6px 18px;
+  border-radius: 12px;
+  color: #ffca78;
+}
+
+.stats {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.stats .item h3 {
+  font-size: 32px;
+  color: #ffb347;
+}
+
+.icons {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Buttons */
+.custom-prev,
+.custom-next {
+  width: 55px !important;
+  height: 55px !important;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-prev::after,
+.custom-next::after {
+  font-size: 24px !important;
+  color: #444;
+}
+.swiper-pagination-bullet {
+  border-radius: none;
+}
+/* Pagination */
+.swiper-pagination-bullet {
+  width: 35px !important;
+  height: 8px !important;
+  border-radius: 6px;
+  background: #196480 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fd9f54 !important;
+  width: 30px !important;
+  height: 8px !important;
+}
+/* end slider style */
+
+#lottie-background-2,
+#lottie-background-3,
+#lottie-background {
+  width: 35%;
+  height: 50%;
+  pointer-events: none; /* علشان ميبوظش أي كليك */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Start Features style */
+
+.home-page-container .features-box {
+  background: #fff;
+  padding: 25px 32px;
+  border-radius: 24px;
+  /* box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.05); */
+  border: 1px solid #e4e7e9;
+  gap: 20px;
+}
+
+.home-page-container .features-box .feature-item {
+  gap: 15px;
+  min-width: 200px;
+}
+
+.home-page-container .features-box .feature-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.home-page-container .features-box .feature-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-family: var(--font-public-sans);
+  color: #191c1f;
+}
+
+.home-page-container .features-box .feature-text {
+  margin: 0;
+  font-size: 14px;
+  color: #5f6c72;
+  font-family: var(--font-public-sans);
+}
+
+.home-page-container .features-box .divider {
+  width: 1px;
+  height: 40px;
+  background: #ddd;
+}
+
+@media (max-width: 768px) {
+  .home-page-container .features-box .divider {
+    display: none;
+  }
+  .home-page-container .features-box .features-box {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* End Feature Style */
+
+/* Start Credit Style */
+.credit-container {
+  margin-bottom: 2.5rem;
+}
+.credit-container .credit-card {
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px 0px #b2976d1a;
+}
+
+.credit-container .credit-card-header {
+  background: #196480; /* اللون اللي اديتيه */
+  padding: 14px 24px;
+}
+
+.credit-container .credit-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #196480;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--poppins);
+}
+.credit-card .credit-card-header .credit-limit {
+  font-family: var(--poppins);
+}
+
+.credit-container .credit-card-body {
+  padding: 16px 24px 18px;
+  font-size: 15px;
+}
+.credit-container .credit-card-body .used {
+  color: #196480;
+  font-family: var(--poppins);
+  font-size: 24px;
+}
+.credit-container .credit-card-body .used span {
+  color: #000;
+}
+.credit-container .credit-card-body .remaining {
+  font-family: var(--poppins);
+  font-size: 24px;
+  color: #196480;
+}
+.credit-container .credit-card-body .remaining span {
+  color: #000;
+}
+.credit-container .credit-card-body hr {
+  border-color: #e5eaed;
+  opacity: 1;
+}
+
+.credit-container .text-primary-custom {
+  color: #196480;
+  font-size: 24px;
+  font-family: var(--poppins);
+  font-weight: 400;
+}
+
+.credit-container .refresh-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #c0c7cc;
+  border-top-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.credit-container .refresh-icon::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #c0c7cc;
+  border-right: 2px solid #c0c7cc;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+/* End Style Credit */
+
+/* Start Product Container */
+
+.products-container {
+  padding: 4.5rem 1rem;
+}
+
+.products-container .header p {
+  color: #191c1f;
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.products-container .header a {
+  color: #196480;
+  font-size: 14px;
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 5 كروت في الصف على الشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .col-xl-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.products-container p {
+  color: #01252b;
+}
+
+.browse-link {
+  color: #196480;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* البوكس الأبيض الكبير اللي فيه كل الكروت */
+.products-wrapper {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 2px 11px 2px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  border: 1px solid #e4e7e9;
+  /* overflow: hidden; علشان الـ border-radius يفضل مظبوط مهما قل عدد الكروت */
+}
+.products-wrapper .row .col-12 {
+  border-right: 1px solid #e4e7e9;
+  border-bottom: 1px solid #e4e7e9;
+  border-top: 1px solid #e4e7e9;
+  padding-bottom: 10px;
+}
+.products-wrapper .row .col-12:last-child {
+  border-right: none;
+}
+/* الكارد نفسه من غير border-radius */
+.product-card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+/* الصورة */
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* اختار أي ارتفاع يناسبك */
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* البادج */
+.badge-status {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.badge-grey {
+  background-color: #929fa5;
+}
+
+.badge-yellow {
+  background-color: #efd33d;
+}
+
+.badge-red {
+  background-color: #ee5858;
+}
+
+/* الأيقونات في hover – أفقية */
+.product-hover-icons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover .product-hover-icons {
+  opacity: 1;
+  visibility: visible;
+}
+.product-hover-icons button:hover {
+  background-color: #196480;
+}
+.product-hover-icons button:hover i {
+  filter: brightness(0) invert(1) !important;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-btn i {
+  font-size: 16px;
+  color: #196480;
+}
+
+/* نص الكارد */
+.product-body {
+  padding: 10px 8px 8px;
+  /* flex: 1 1 auto; */
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #191c1f;
+  margin-bottom: 8px;
+  min-height: 42px;
+  font-family: var(--font-public-sans);
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #196480;
+  font-family: var(--font-public-sans);
+}
+
+.audience-price {
+  font-size: 12px;
+  font-family: var(--poppins);
+  color: #faa62d;
+}
+
+.audience-value {
+  color: #faa62d;
+}
+
+/* زرار Add to cart */
+.product-add-btn {
+  border: none;
+  width: 100%;
+  padding: 10px 16px;
+  background: #196480;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: var(--poppins);
+}
+
+.product-add-btn:hover {
+  background: #145066;
+}
+
+/* End Product Container */
+
+/* Start Suppliers */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #01252b;
+  font-family: var(--font-public-sans);
+}
+
+.browse-suppliers-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #196480;
+}
+
+/* الكارد */
+.supplier-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  /* box-shadow: 0px 1px 2px rgba(56, 172, 177, 0.05); */
+  border: 1px solid #f0eff9;
+}
+
+/* صورة الدكتور */
+.supplier-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* الاسم و الوصف */
+.supplier-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2E2D3C;
+  font-family: var(--poppins);
+}
+
+.supplier-role {
+  font-size: 12px;
+  color: #667085;
+  font-family: var(--poppins);
+}
+
+/* البادچ بتاع الـ Rating */
+.rating-pill {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ffe3b5;
+  color: #f2994a;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+/* التاجات تحت (Medical devices / +3) */
+.tag-pill {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: #EFF8FF;
+  color: #101828;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+.tag-count {
+  background: #EFF8FF;
+  color: #101828;
+}
+
+/* علشان التباعد بين الكروت يبقى زي التصميم */
+/* .suppliers-container .row.g-3 > [class*="col-"] {
+} */
+
+/* End Suppliers */
+
+
+
+
+/* Start Pharmacy Setup */
+
+
+
+  .pharmacy-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #18181b;
+  }
+
+  .plan-card {
+    border-radius: 28px;
+    background: #fbfbfd;
+    padding: 32px 32px 24px;
+    box-shadow: 0px 1px 2px rgba(56, 172, 177, 0.05);
+  }
+
+  .plan-card-pro {
+    background: linear-gradient(180deg, #35a0c8 0%, #005a73 100%);
+    color: #ffffff;
+  }
+
+  .plan-price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #196480;
+  }
+
+  .plan-name {
+    font-size: 26px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .plan-desc {
+    font-size: 13px;
+    color: #6b7280;
+    max-width: 320px;
+  }
+
+  .plan-features li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #4b5563;
+  }
+
+  .plan-features i {
+    font-size: 13px;
+    color: #196480;
+  }
+
+  .plan-card-pro .plan-features i {
+    color: #ffffff;
+  }
+
+  .plan-btn {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 16px;
+    background: #196480;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .plan-btn-pro {
+    background: #ffffff;
+    color: #196480;
+  }
+
+/* End Pharmacy Setup */
