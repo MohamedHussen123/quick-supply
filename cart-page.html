@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- login style  -->
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+
+    <!-- font IBM Plex Sans Arabic -->
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
+
+    <!-- font Poppins -->
+    <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
+
+    <!-- font Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css" />
+
+    <!-- Select2 -->
+    <link href="./css/select2.min.css" rel="stylesheet" />
+
+    <!-- Stepper css -->
+    <link rel="stylesheet" href="./css/stepper.css" />
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar py-2 border-bottom border-secondary border-opacity-25">
+            <div class="container d-flex flex-wrap justify-content-between">
+                <div class="">Welcome to Clicon online eCommerce store.</div>
+                <div class=" d-flex align-items-center gap-3">
+                    <span>Follow us :</span>
+                    <a href="#">
+                        <img src="./images/icons/Twitter.svg" width="16" height="16" alt="Twitter Icon"
+                            class="twitter-icon" />
+                    </a>
+                    <a href="#">
+                        <img src="./images/icons/Facebook.svg" width="16" height="16" alt="Facebook Icon" />
+                    </a>
+                    <a href="#">
+                        <img src="./images/icons/Pinterest.svg" width="16" height="16" alt="Pinterest Icon" />
+                    </a>
+                    <a href="#"><img src="./images/icons/Youtube.svg" width="16" height="16" alt="Youtube Icon" /></a>
+                    <a href="#">
+                        <img src="./images/icons/Instagram.svg" width="16" height="16" alt="Instagram Icon" /></a>
+
+                    <div class="d-flex align-items-center gap-3 lang-currency ms-3 ps-3"
+                        style="border-left: 1px solid rgba(255,255,255,0.3);">
+
+                        <!-- Language -->
+                        <div class="custom-select-wrapper">
+                            <select class="custom-select-topbar">
+                                <option value="en" selected>Eng</option>
+                                <option value="ar">Arabic</option>
+                                <option value="fr">French</option>
+                            </select>
+                        </div>
+
+                        <!-- Currency -->
+                        <div class="custom-select-wrapper">
+                            <select class="custom-select-topbar">
+                                <option value="usd" selected>USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="egp">EGP</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <!-- لو عندك لوجو حقيقي حط مساره هنا -->
+                    <img src="./images/logo.svg" alt="Quick Supply Logo" />
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav Content -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <!-- Center links -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./home-page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Suppliers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Returns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Invoices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Who are</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right side: Add order + icons -->
+                    <div class="d-flex align-items-center gap-3 ms-lg-3 flex-wrap">
+                        <button class="btn-add-order" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#addOrderOffcanvas" aria-controls="addOrderOffcanvas">
+                            <img loading="lazy" src="./images/icons/plus.svg" width="20" height="20" alt="plus icon">
+                            <span>Add order</span>
+                        </button>
+
+
+                        <div class="nav-icons">
+                            <span class="icon-wrapper">
+                                <img src="./images/icons/message.svg" width="32" height="32" loading="lazy"
+                                    alt="message icon">
+                            </span>
+                            <span class="icon-wrapper">
+                                <img src="./images/icons/search-normal.svg" width="32" height="32" alt="Search Icon">
+                            </span>
+                            <!-- Notification dropdown -->
+                            <div class="dropdown notification-dropdown">
+                                <button class="icon-wrapper btn p-0 border-0 bg-transparent" type="button"
+                                    id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./images/icons/notification.svg" width="32" height="32"
+                                        alt="Notification">
+                                </button>
+
+                                <div class="dropdown-menu dropdown-menu-end notification-menu"
+                                    aria-labelledby="notificationDropdown">
+                                    <!-- Header -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0 notification-title">Notifications</h6>
+                                        <a href="#" class="notification-see-all">See All</a>
+                                    </div>
+
+                                    <!-- Items -->
+                                    <div class="notification-list">
+                                        <div class="notification-item">
+                                            <img src="./images/avatar/a10b54bc2d50fb172fe960160bb083cc04daa842.jpg"
+                                                alt="avatar" class="notification-avatar" />
+                                            <div class="notification-text">
+                                                <p class="mb-1">
+                                                    Hala added a comment to your product
+                                                </p>
+                                                <p class="d-flex justify-content-between">
+                                                    "6 pices of socks"
+                                                    <span class="view-comment"> View Comment </span>.
+                                                    <span class="notification-time"> 2 min ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item">
+                                            <img src="./images/avatar/a10b54bc2d50fb172fe960160bb083cc04daa842.jpg"
+                                                alt="avatar" class="notification-avatar" />
+                                            <div class="notification-text">
+                                                <p class="mb-1">
+                                                    Hala added a comment to your product
+                                                </p>
+                                                <p class="d-flex justify-content-between">
+                                                    "6 pices of socks"
+                                                    <span class="view-comment"> View Comment </span>.
+                                                    <span class="notification-time"> 2 min ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item">
+                                            <img src="./images/avatar/a10b54bc2d50fb172fe960160bb083cc04daa842.jpg"
+                                                alt="avatar" class="notification-avatar" />
+                                            <div class="notification-text">
+                                                <p class="mb-1">
+                                                    Hala added a comment to your product
+                                                </p>
+                                                <p class="d-flex justify-content-between">
+                                                    "6 pices of socks"
+                                                    <span class="view-comment"> View Comment </span>.
+                                                    <span class="notification-time"> 2 min ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Notification dropdown -->
+                            <span class="icon-wrapper">
+                                <img src="./images/icons/Heart.svg" width="32" height="32" alt="Heart Icon">
+                            </span>
+                            <span class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960"
+                                    width="32px" fill="#fff">
+                                    <path
+                                        d="M286.15-97.69q-29.15 0-49.57-20.43-20.42-20.42-20.42-49.57 0-29.16 20.42-49.58 20.42-20.42 49.57-20.42 29.16 0 49.58 20.42 20.42 20.42 20.42 49.58 0 29.15-20.42 49.57-20.42 20.43-49.58 20.43Zm387.7 0q-29.16 0-49.58-20.43-20.42-20.42-20.42-49.57 0-29.16 20.42-49.58 20.42-20.42 49.58-20.42 29.15 0 49.57 20.42t20.42 49.58q0 29.15-20.42 49.57Q703-97.69 673.85-97.69ZM240.61-730 342-517.69h272.69q3.46 0 6.16-1.73 2.69-1.73 4.61-4.81l107.31-195q2.31-4.23.38-7.5-1.92-3.27-6.54-3.27h-486Zm-28.76-60h555.38q24.54 0 37.11 20.89 12.58 20.88 1.2 42.65L677.38-494.31q-9.84 17.31-26.03 26.96-16.2 9.66-35.5 9.66H324l-46.31 84.61q-3.08 4.62-.19 10 2.88 5.39 8.65 5.39h427.7q12.76 0 21.38 8.61 8.61 8.62 8.61 21.39 0 12.77-8.61 21.38-8.62 8.62-21.38 8.62h-427.7q-40 0-60.11-34.5-20.12-34.5-1.42-68.89l57.07-102.61L136.16-810H90q-12.77 0-21.38-8.62Q60-827.23 60-840t8.62-21.38Q77.23-870 90-870h61.15q10.24 0 19.08 5.42 8.85 5.43 13.46 15.27L211.85-790ZM342-517.69h280-280Z" />
+                                </svg>
+                                <span class="cart-badge">2</span>
+                            </span>
+                            <span class="icon-wrapper">
+                                <img width="32" height="32" src="./images/icons/User.svg" alt="User Icon">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <!-- Add Order Offcanvas -->
+    <div class="offcanvas offcanvas-end offcanvas-add-order " tabindex="-1" id="addOrderOffcanvas"
+        aria-labelledby="addOrderOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="addOrderOffcanvasLabel">Add Order</h5>
+            <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img loading="lazy" src="./images/icons/close-square.svg" width="24" height="24" alt="close-square">
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <form class="d-flex flex-column justify-content-between h-100">
+                <!-- Product name -->
+                <section>
+                    <div class="mb-3">
+                        <label class="form-label">Product name</label>
+                        <input type="text" class="form-control" placeholder="*******" />
+                    </div>
+
+                    <!-- Category -->
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-select">
+                            <option selected>Medical device</option>
+                            <option>Medicine</option>
+                            <option>Cosmetics</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="mb-3">
+                        <label class="form-label">Quantity</label>
+                        <select class="form-select">
+                            <option selected>1</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+
+                    <!-- Global code -->
+                    <div class="mb-4">
+                        <label class="form-label">Global code</label>
+                        <input type="text" class="form-control" placeholder="*******" />
+                    </div>
+                </section>
+
+
+                <!-- Bottom actions -->
+                <div class="d-flex gap-3 offcanvas-actions">
+                    <button type="button" class="btn-upload-excel w-50">
+                        <img class="me-2" src="./images/icons/upload.svg" width="20" height="20" alt="upload">
+                        Upload excel
+                    </button>
+                    <button type="submit" class="btn-confirm w-50">
+                        Confirm
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Add Order Offcanvas -->
+
+
+    <div class="cart-container">
+        <!-- Statr Breadcrumb -->
+        <div class="cart-breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center gap-1">
+                        <a href="./home-page.html" class=""> <img src="./images/icons/House.svg" alt="">
+                            <span>Home</span> </a>
+                        <span class="mx-1">›</span>
+                        <span class="current">Shopping Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumb-->
+        <div class="container cart-content">
+            <div class="row g-4">
+                <!-- LEFT: Cart table -->
+                <div class="col-12 col-lg-8">
+                    <div class="cart-box">
+                        <h3 class="cart-title mb-0">Shopping Cart</h3>
+                        <!-- Header row -->
+                        <div class="cart-table-header d-flex">
+                            <div class="col-5">Products</div>
+                            <div class="col-2 text-center">Price</div>
+                            <div class="col-2 text-center">Discount rate</div>
+                            <div class="col-2 text-center">Quantity</div>
+                            <div class="col-1 text-center">Sub-total</div>
+                        </div>
+
+                        <!-- Row 1 -->
+                        <div class="cart-table-row d-flex align-items-center">
+                            <div class="col-5 d-flex align-items-center gap-3">
+                                <span class="cart-remove">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                                <div class="cart-product-img">
+                                    <!-- عدل الصورة -->
+                                    <img src="./images/icons/Frame.svg" width="32" height="32" loading="lazy" alt="">
+                                </div>
+                                <div>
+                                    <div class="cart-product-name">Sterile Bandage Rolls</div>
+                                </div>
+                            </div>
+
+                            <div class="col-2 text-center">
+                                <span class="cart-old-price">$99</span>
+                                <span class="cart-new-price">$70</span>
+                            </div>
+
+                            <div class="col-2 text-center">
+                                16%
+                            </div>
+
+                            <div class="col-2 text-center">
+                                <div class="qty-control mx-auto">
+                                    <button class="qty-btn" type="button">−</button>
+                                    <input class="qty-value" type="text" value="01" readonly />
+                                    <button class="qty-btn" type="button">+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-1 text-center">
+                                $70
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="cart-table-row d-flex align-items-center">
+                            <div class="col-5 d-flex align-items-center gap-3">
+                                <span class="cart-remove">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                                <div class="cart-product-img">
+                                    <img src="./images/icons/supples.svg" width="32" height="32" loading="lazy" alt="">
+                                </div>
+                                <div>
+                                    <div class="cart-product-name">Disposable Syringes (20ml)</div>
+                                </div>
+                            </div>
+
+                            <div class="col-2 text-center">
+                                <span class="cart-new-price">$250</span>
+                            </div>
+
+                            <div class="col-2 text-center">
+                                20%
+                            </div>
+
+                            <div class="col-2 text-center">
+                                <div class="qty-control mx-auto">
+                                    <button class="qty-btn" type="button">−</button>
+                                    <input class="qty-value" type="text" value="03" readonly />
+                                    <button class="qty-btn" type="button">+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-1 text-center">
+                                $250
+                            </div>
+                        </div>
+
+                        <!-- Footer row (Update cart) -->
+                        <div class="d-flex justify-content-end mt-3 pb-4 px-3">
+                            <button class="update-cart-btn" type="button">
+                                <img src="./images/icons/plus-blue.svg" width="20" height="20" alt="Plus"
+                                    loading="lazy">
+                                Update cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Totals -->
+                <div class="col-12 col-lg-4">
+                    <div class="totals-box">
+                        <h4 class="totals-title">Cart Totals</h4>
+
+                        <div class="d-flex justify-content-between totals-row">
+                            <span class="title">Sub-total</span>
+                            <span class="value">$320</span>
+                        </div>
+                        <div class="d-flex justify-content-between totals-row">
+                            <span class="title">Shipping</span>
+                            <span class="value">Free</span>
+                        </div>
+                        <div class="d-flex justify-content-between totals-row">
+                            <span class="title">Discount</span>
+                            <span class="value">$24</span>
+                        </div>
+                        <div class="d-flex justify-content-between totals-row">
+                            <span class="title">Tax</span>
+                            <span class="value">$61.99</span>
+                        </div>
+
+                        <hr class="totals-divider" />
+
+                        <div class="d-flex justify-content-between align-items-center totals-row mb-0">
+                            <span class="totals-total-label">Total</span>
+                            <span class="totals-total-value">$357.99 USD</span>
+                        </div>
+
+                        <button class="checkout-btn" type="button">
+                            <a href="./ckeck-out-page.html" class="text-decoration-none text-white">
+                                Proceed to checkout
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- start Footer -->
+        <footer class="qs-footer">
+            <div class="container">
+                <!-- الصف العلوي -->
+                <div class="row align-items-start mb-5">
+                    <!-- لوجو + بيانات -->
+                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="qs-footer-logo mb-4">
+                            <!-- عدّل مسار اللوجو -->
+                            <img src="./images/logo.svg" alt="Quick Supply" class="img-fluid" />
+                        </div>
+
+                        <div class="qs-footer-contact">
+                            <p class="qs-footer-label mb-1">Customer Supports:</p>
+                            <p class="qs-footer-phone mb-3">(629) 555-0129</p>
+
+                            <p class="qs-footer-text mb-3">
+                                4517 Washington Ave.<br />
+                                Manchester, Kentucky 39495
+                            </p>
+
+                            <p class="qs-footer-email mb-0">info@kinbo.com</p>
+                        </div>
+                    </div>
+
+                    <!-- الروابط -->
+                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                        <ul class="qs-footer-nav list-unstyled d-flex justify-content-center gap-4 mb-0">
+                            <li><a href="./home-page.html">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- السوشيال -->
+                    <div class="col-12 col-lg-4">
+                        <div class="qs-footer-social d-flex justify-content-lg-end justify-content-center gap-3">
+                            <a href="#" aria-label="Instagram"><span><i class="fab fa-instagram"></i></span></a>
+                            <a href="#" aria-label="Twitter"><span><i class="fab fa-twitter"></i></span></a>
+                            <a href="#" aria-label="Pinterest"><span><i class="fab fa-pinterest-p"></i></span></a>
+                            <a href="#" aria-label="Facebook"><span><i class="fab fa-facebook-f"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الخط الفاصل -->
+                <hr class="qs-footer-divider" />
+
+                <!-- الكوبي رايت -->
+                <div class="qs-footer-bottom text-center">
+                    <p class="mb-0">Copyright © 2025 tasawk.com.sa</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer -->
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS  -->
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="./js/select2.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>
