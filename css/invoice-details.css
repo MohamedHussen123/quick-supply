@@ -1,0 +1,351 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+.invoice-page {
+  padding-top: 5.05%;
+  padding-bottom: 4.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+  background-color: #fff;
+}
+
+.invoice-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.invoice-details {
+  flex: 1.5;
+  min-width: 580px;
+}
+.invoice-details hr {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.order-details {
+  flex: 1;
+  min-width: 320px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 32px;
+  font-family: var(--font-public-sans);
+  line-height: 32px;
+}
+
+/* Sections */
+.section-block {
+  margin-bottom: 22px;
+}
+
+.section-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-family: var(--poppins);
+}
+
+/* Product row */
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 0 0 24px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.product-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.product-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f2f4f7;
+  flex-shrink: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-text {
+  max-width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(25, 28, 31, 1);
+  margin-bottom: 4px;
+  font-family: var(--poppins);
+}
+
+.product-qty {
+  font-size: 14px;
+  color: rgba(22, 61, 47, 1);
+  font-family: var(--poppins);
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.product-prices {
+  min-width: 150px;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.price-label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.price-value {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  font-family: var(--poppins);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Payments */
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #edf0f4;
+}
+.payment-row:last-child {
+  border-bottom: 1px solid #edf0f4;
+}
+.payment-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.payment-label {
+  font-size: 16px;
+  font-family: var(--poppins);
+  font-weight: 400;
+  line-height: 20px;
+  color: #196480;
+  cursor: pointer;
+  padding: 22px 12px;
+}
+
+.payment-amount {
+  font-size: 16px;
+  font-family: var(--poppins);
+  font-weight: 700;
+  line-height: 20px;
+  color: #222222;
+}
+
+.payment-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.payment-date {
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  line-height: 20px;
+  color: #00000099;
+}
+
+/* Buttons */
+
+.btn-pill.primary {
+  background: #196480;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 10px 16px;
+  min-width: 104px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-pill.primary:hover {
+  background: #095669;
+}
+
+/* Order summary */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 4px 0;
+  color: #4b5563;
+}
+
+.summary-discount {
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 400;
+  line-height: 20px;
+  color: #ef4444;
+}
+
+.summary-row .summary-value {
+  color: rgba(47, 47, 47, 1);
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 400;
+  line-height: 20px;
+}
+.summary-label {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  line-height: 20px;
+}
+.summary-total .summary-label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  line-height: 20px;
+}
+.summary-total {
+  border-top: 1px solid #edf0f4;
+  margin-top: 6px;
+  padding-top: 8px;
+  font-weight: 600;
+}
+
+/* Right card: order details */
+.details-list {
+  margin-top: 6px;
+}
+
+.details-row {
+  display: flex;
+  gap: 13px;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.details-label {
+  color: rgba(0, 0, 0, 1);
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.details-value {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Status pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-pill.delivered {
+  background: rgba(240, 240, 240, 1);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-family: var(--nunito);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .invoice-container {
+    padding: 0 16px;
+  }
+
+  .invoice-details,
+  .order-details {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 18px 16px;
+  }
+
+  .product-row {
+    flex-direction: column;
+  }
+
+  .product-prices {
+    width: 100%;
+  }
+
+  .payment-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .payment-meta {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .details-label {
+    min-width: 100px;
+  }
+}
