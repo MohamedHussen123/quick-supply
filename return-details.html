@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Invoice</title>
     <!-- bootstrap style -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- checkout style  -->
-    <link rel="stylesheet" href="./css/invoice-details.css" />
+    <link rel="stylesheet" href="./css/return-details.css" />
     <!-- navbar style  -->
     <link rel="stylesheet" href="./css/navbar.css" />
     <!-- Footer style -->
@@ -27,6 +27,14 @@
     <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
     <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
 
+    <!-- public sans -->
+    <link rel="stylesheet" href="./fonts/PublicSans-Black.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-Bold.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-ExtraBold.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-ExtraLight.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-Medium.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-Regular.ttf" />
+    <link rel="stylesheet" href="./fonts/PublicSans-Thin.ttf" />
     <!-- font Nunito -->
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
@@ -48,6 +56,7 @@
     <!-- swiper css -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
   </head>
+
   <body>
     <header>
       <!-- Top Bar -->
@@ -160,10 +169,10 @@
                 <a class="nav-link" href="#">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./returns-page.html">Returns</a>
+                <a class="nav-link active" href="#">Returns</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./Invoices.html">Invoices</a>
+                <a class="nav-link" href="./Invoices.html">Invoices</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Who are</a>
@@ -332,158 +341,136 @@
       </nav>
     </header>
 
-    <!-- ===== Invoice Content Start ===== -->
-    <main class="invoice-page">
-      <div class="invoice-container container">
-        <!-- Left: Invoice details -->
-        <section class="card invoice-details">
-          <h2 class="card-title">Invoices details</h2>
-          <hr />
-          <!-- Products -->
-          <div class="section-block">
-            <p class="section-label">Products:</p>
-            <div class="product-row">
-              <div class="product-info">
-                <div class="product-image">
-                  <img
-                    src="./images/invoice/invoice-product.png"
-                    alt="Base Sport Earbuds"
-                  />
-                </div>
-                <div class="product-text">
-                  <p class="product-name mb-0">
-                    Base Sport Earbuds - Wireless Earphones - Bluetooth in Ear…
-                  </p>
-                  <p class="product-qty mb-0">x1</p>
-                </div>
-              </div>
+    <!-- ============ Returns Page Content ============ -->
+    <section class="invoice-returns-section">
+      <div class="container">
+        <div class="invoice-returns-card">
+          <!-- Header -->
+          <div class="invoice-returns-header">
+            <h2 class="invoice-returns-title">Invoices details</h2>
+            <button class="btn-return-all">Return all</button>
+          </div>
 
-              <div class="product-prices">
+          <hr class="invoice-divider" />
+
+          <p class="items-label mb-0">Items for returns :</p>
+
+          <!-- Row 1 -->
+          <div class="invoice-item-row">
+            <div class="item-left">
+              <div class="item-image">
+                <img
+                  src="./images/invoice/invoice-product.png"
+                  alt="Bose Sport Earbuds"
+                />
+              </div>
+              <div class="item-text">
+                <p class="item-name">
+                  Bose Sport Earbuds – Wireless Earphones – Bluetooth In Ear…
+                </p>
+              </div>
+              <span class="item-qty">x1</span>
+            </div>
+
+            <div class="item-right">
+              <div class="item-prices">
                 <div class="price-line">
                   <span class="price-label">Piece price:</span>
-                  <span class="price-value">99.00 EGP</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
                 </div>
                 <div class="price-line">
                   <span class="price-label">Total price:</span>
-                  <span class="price-value">99.00 EGP</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
                 </div>
               </div>
+
+              <button class="btn-return">Return</button>
             </div>
           </div>
 
-          <!-- Payments -->
-          <div class="section-block">
-            <p class="section-label">Payments :</p>
-
-            <div class="payment-row">
-              <div class="payment-info">
-                <span class="payment-label">Pied 1</span>
+          <!-- Row 2 -->
+          <div class="invoice-item-row">
+            <div class="item-left">
+              <div class="item-image">
+                <img
+                  src="./images/invoice/invoice-product.png"
+                  alt="Bose Sport Earbuds"
+                />
               </div>
-              <div>
-                <span class="payment-amount">50 SAR</span>
+              <div class="item-text">
+                <p class="item-name">
+                  Bose Sport Earbuds – Wireless Earphones – Bluetooth In Ear…
+                </p>
               </div>
-              <div>
-                <span class="payment-date">Sep 13, 2023 – 12:08 PM</span>
-              </div>
-              <div class="payment-meta">
-                <button class="btn-pill primary">Pied</button>
-              </div>
+              <span class="item-qty">x1</span>
             </div>
 
-            <div class="payment-row">
-              <div class="payment-info">
-                <span class="payment-label">Pied 2</span>
+            <div class="item-right">
+              <div class="item-prices">
+                <div class="price-line">
+                  <span class="price-label">Piece price:</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
+                </div>
+                <div class="price-line">
+                  <span class="price-label">Total price:</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
+                </div>
               </div>
-              <div>
-                <span class="payment-amount">50 SAR</span>
-              </div>
-              <div>
-                <span class="payment-date">Sep 13, 2023 – 12:08 PM</span>
-              </div>
-              <div class="payment-meta">
-                <button class="btn-pill primary">Pied</button>
-              </div>
+
+              <button class="btn-return">Return</button>
             </div>
           </div>
 
-          <!-- Order summary -->
-          <div class="section-block">
-            <p class="section-label" style="font-size: 14px">Order summary:</p>
-
-            <div class="summary-row">
-              <span class="summary-label">Subtotal</span>
-              <span class="summary-value">99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">
-                Discount <span class="">(-20%)</span>
-              </span>
-              <span class="summary-discount">-99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">Commission</span>
-              <span class="summary-value">99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">Delivery Fee</span>
-              <span class="summary-value">99.00 EGP</span>
+          <!-- Row 3 -->
+          <div class="invoice-item-row">
+            <div class="item-left">
+              <div class="item-image">
+                <img
+                  src="./images/invoice/invoice-product.png"
+                  alt="Bose Sport Earbuds"
+                />
+              </div>
+              <div class="item-text">
+                <p class="item-name">
+                  Bose Sport Earbuds – Wireless Earphones – Bluetooth In Ear…
+                </p>
+              </div>
+              <span class="item-qty">x1</span>
             </div>
 
-            <div class="summary-row summary-total">
-              <span class="summary-label">Total</span>
-              <span class="summary-value">99.00 EGP</span>
+            <div class="item-right">
+              <div class="item-prices">
+                <div class="price-line">
+                  <span class="price-label">Piece price:</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
+                </div>
+                <div class="price-line">
+                  <span class="price-label">Total price:</span>
+                  <span class="price-value">
+                    99.00<span class="price-currency">EGP</span>
+                  </span>
+                </div>
+              </div>
+
+              <button class="btn-return">Return</button>
             </div>
           </div>
-        </section>
-
-        <!-- Right: Order details -->
-        <section class="card order-details">
-          <h2 class="card-title">Order details</h2>
-
-          <div class="details-list">
-            <div class="details-row">
-              <span class="details-label">Name:</span>
-              <span class="details-value">Omar elbayoumi</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Phone number:</span>
-              <span class="details-value">0252000000</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Order number:</span>
-              <span class="details-value">95419</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">The date:</span>
-              <span class="details-value">Sep 13, 2023 – 12:08 PM</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Payment method:</span>
-              <span class="details-value">Cash on delivery</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Location:</span>
-              <span class="details-value">
-                Madint mobark, taha shawkry street
-              </span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">The condition:</span>
-              <span class="details-value">
-                <span class="status-pill delivered">Delivered</span>
-              </span>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
-    <!-- ===== Invoice Content End ===== -->
+    </section>
+    <!-- ========== End Invoices Returns Section ========== -->
+
+    <!-- ============ Returns Page Content End ============ -->
 
     <!-- start Footer -->
     <footer class="qs-footer">

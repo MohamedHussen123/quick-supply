@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Returns</title>
     <!-- bootstrap style -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- checkout style  -->
-    <link rel="stylesheet" href="./css/invoice-details.css" />
+    <link rel="stylesheet" href="./css/invoice.css" />
     <!-- navbar style  -->
     <link rel="stylesheet" href="./css/navbar.css" />
     <!-- Footer style -->
@@ -48,6 +48,7 @@
     <!-- swiper css -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
   </head>
+
   <body>
     <header>
       <!-- Top Bar -->
@@ -151,7 +152,9 @@
             <!-- Center links -->
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="./home-page.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Suppliers</a>
@@ -160,10 +163,10 @@
                 <a class="nav-link" href="#">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./returns-page.html">Returns</a>
+                <a class="nav-link active" href="#">Returns</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./Invoices.html">Invoices</a>
+                <a class="nav-link" href="./Invoices.html">Invoices</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Who are</a>
@@ -331,159 +334,159 @@
         </div>
       </nav>
     </header>
-
-    <!-- ===== Invoice Content Start ===== -->
-    <main class="invoice-page">
-      <div class="invoice-container container">
-        <!-- Left: Invoice details -->
-        <section class="card invoice-details">
-          <h2 class="card-title">Invoices details</h2>
-          <hr />
-          <!-- Products -->
-          <div class="section-block">
-            <p class="section-label">Products:</p>
-            <div class="product-row">
-              <div class="product-info">
-                <div class="product-image">
-                  <img
-                    src="./images/invoice/invoice-product.png"
-                    alt="Base Sport Earbuds"
-                  />
-                </div>
-                <div class="product-text">
-                  <p class="product-name mb-0">
-                    Base Sport Earbuds - Wireless Earphones - Bluetooth in Ear…
-                  </p>
-                  <p class="product-qty mb-0">x1</p>
-                </div>
-              </div>
-
-              <div class="product-prices">
-                <div class="price-line">
-                  <span class="price-label">Piece price:</span>
-                  <span class="price-value">99.00 EGP</span>
-                </div>
-                <div class="price-line">
-                  <span class="price-label">Total price:</span>
-                  <span class="price-value">99.00 EGP</span>
-                </div>
-              </div>
-            </div>
+    <!-- Start Invoices Table -->
+    <div class="invoices-page">
+      <div class="container-fluid">
+        <div class="row justify-content-between align-items-center mb-4">
+          <div class="col-12 col-md-12">
+            <h2 class="title">Returns</h2>
           </div>
-
-          <!-- Payments -->
-          <div class="section-block">
-            <p class="section-label">Payments :</p>
-
-            <div class="payment-row">
-              <div class="payment-info">
-                <span class="payment-label">Pied 1</span>
-              </div>
-              <div>
-                <span class="payment-amount">50 SAR</span>
-              </div>
-              <div>
-                <span class="payment-date">Sep 13, 2023 – 12:08 PM</span>
-              </div>
-              <div class="payment-meta">
-                <button class="btn-pill primary">Pied</button>
-              </div>
+          <div class="col-12 col-md-6"></div>
+          <!-- Search + Filter -->
+          <div
+            class="col-12 col-md-6 d-flex justify-content-md-end justify-content-start gap-3"
+          >
+            <!-- Search -->
+            <div class="invoice-search">
+              <img
+                src="./images/icons/search.svg"
+                width="20"
+                height="20"
+                alt="search icon"
+                loading="lazy"
+              />
+              <input type="text" placeholder="Search" />
             </div>
 
-            <div class="payment-row">
-              <div class="payment-info">
-                <span class="payment-label">Pied 2</span>
-              </div>
-              <div>
-                <span class="payment-amount">50 SAR</span>
-              </div>
-              <div>
-                <span class="payment-date">Sep 13, 2023 – 12:08 PM</span>
-              </div>
-              <div class="payment-meta">
-                <button class="btn-pill primary">Pied</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Order summary -->
-          <div class="section-block">
-            <p class="section-label" style="font-size: 14px">Order summary:</p>
-
-            <div class="summary-row">
-              <span class="summary-label">Subtotal</span>
-              <span class="summary-value">99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">
-                Discount <span class="">(-20%)</span>
+            <!-- Filter button -->
+            <button type="button" class="invoice-btn-filter">
+              <span>Filter</span>
+              <span class="filter-icon">
+                <img
+                  src="./images/icons/download-cloud.svg"
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                  alt="download-cloud"
+                />
               </span>
-              <span class="summary-discount">-99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">Commission</span>
-              <span class="summary-value">99.00 EGP</span>
-            </div>
-            <div class="summary-row">
-              <span class="summary-label">Delivery Fee</span>
-              <span class="summary-value">99.00 EGP</span>
-            </div>
+            </button>
 
-            <div class="summary-row summary-total">
-              <span class="summary-label">Total</span>
-              <span class="summary-value">99.00 EGP</span>
+            <!-- More button -->
+            <button type="button" class="invoice-btn-icon">
+              <img src="./images/icons/more-vertical.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="invoice-table-wrapper">
+              <table class="invoice-table w-100">
+                <thead>
+                  <tr>
+                    <th>Order number</th>
+                    <th>Date</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th class="">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">INV–2023–010</a></td>
+                    <td>22/12/22</td>
+                    <td>George R.R Martin</td>
+                    <td>
+                      <span class="badge-status badge-paid">Paid</span>
+                    </td>
+                    <td class="">
+                      <a href="./return-details.html" class="view-link"
+                        >View details</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">INV–2023–011</a></td>
+                    <td>22/10/2022</td>
+                    <td>Markus Suzak</td>
+                    <td>
+                      <span class="badge-status badge-scheduled"
+                        >Scheduled</span
+                      >
+                    </td>
+                    <td class="">
+                      <a href="./invoice-details.html" class="view-link"
+                        >View details</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">INV–2023–012</a></td>
+                    <td>22/05/2022</td>
+                    <td>Ankur Warikoo</td>
+                    <td>
+                      <span class="badge-status badge-paid">Paid</span>
+                    </td>
+                    <td class="">
+                      <a href="./return-details.html" class="view-link"
+                        >View details</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">INV–2023–014</a></td>
+                    <td>14/07/2020</td>
+                    <td>Jodi Picoult</td>
+                    <td>
+                      <span class="badge-status badge-scheduled"
+                        >Scheduled</span
+                      >
+                    </td>
+                    <td class="">
+                      <a href="./returns-page.html" class="view-link"
+                        >View details</a
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">INV–2023–010</a></td>
+                    <td>12/04/2021</td>
+                    <td>James Clear</td>
+                    <td>
+                      <span class="badge-status badge-paid">Paid</span>
+                    </td>
+                    <td class="">
+                      <a href="#" class="view-link">View details</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">INV–2023–010</a></td>
+                    <td>02/02/2022</td>
+                    <td>Frank Herbert</td>
+                    <td>
+                      <span class="badge-status badge-scheduled"
+                        >Scheduled</span
+                      >
+                    </td>
+                    <td class="">
+                      <a href="./return-details.html" class="view-link"
+                        >View details</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </section>
-
-        <!-- Right: Order details -->
-        <section class="card order-details">
-          <h2 class="card-title">Order details</h2>
-
-          <div class="details-list">
-            <div class="details-row">
-              <span class="details-label">Name:</span>
-              <span class="details-value">Omar elbayoumi</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Phone number:</span>
-              <span class="details-value">0252000000</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Order number:</span>
-              <span class="details-value">95419</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">The date:</span>
-              <span class="details-value">Sep 13, 2023 – 12:08 PM</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Payment method:</span>
-              <span class="details-value">Cash on delivery</span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">Location:</span>
-              <span class="details-value">
-                Madint mobark, taha shawkry street
-              </span>
-            </div>
-
-            <div class="details-row">
-              <span class="details-label">The condition:</span>
-              <span class="details-value">
-                <span class="status-pill delivered">Delivered</span>
-              </span>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
-    <!-- ===== Invoice Content End ===== -->
+    </div>
 
     <!-- start Footer -->
     <footer class="qs-footer">

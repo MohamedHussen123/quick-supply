@@ -16,7 +16,9 @@ header {
   background-color: var(--main-bg);
   color: #ffffff;
 }
-
+.d-flex.align-items-center.gap-3 {
+  flex-wrap: wrap;
+}
 /* ---------- Top Bar ---------- */
 .top-bar {
   font-size: 14px;
@@ -169,12 +171,12 @@ header {
   top: -6px;
   right: -10px;
   background-color: #ffffff;
-  color: #1B6392;
+  color: #1b6392;
   font-weight: 600;
   border-radius: 999px;
   font-size: 12px;
   padding: 0 4px;
-  border: 1px solid #1B6392;
+  border: 1px solid #1b6392;
   width: 20px;
   height: 20px;
   display: flex;
@@ -366,10 +368,9 @@ header {
   gap: 10px;
   padding: 8px 2px;
   margin-bottom: 6px;
-
 }
 .notification-item:not(:first-child) {
-  border-top:1px solid #e5e7eb ;
+  border-top: 1px solid #e5e7eb;
 }
 .notification-item:last-child {
   margin-bottom: 0;
@@ -388,7 +389,6 @@ header {
 /* النص جوه النوتيفيكيشن */
 .notification-text {
   flex: 1;
-  
 }
 .notification-text p span.view-comment {
   color: #196480;
