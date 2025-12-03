@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Invoice Details</title>
+    <title>FAQ</title>
+
     <!-- bootstrap style -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <!-- checkout style  -->
-    <link rel="stylesheet" href="./css/return-details.css" />
-    <!-- navbar style  -->
+    <!-- login style  -->
+    <link rel="stylesheet" href="./css/faq-style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
-    <!-- Footer style -->
     <link rel="stylesheet" href="./css/footer.css" />
 
     <!-- font IBM Plex Sans Arabic -->
@@ -172,12 +171,10 @@
                 <a class="nav-link" href="#">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./returns-page.html"
-                  >Returns</a
-                >
+                <a class="nav-link" href="#">Returns</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Invoices.html">Invoices</a>
+                <a class="nav-link" href="#">Invoices</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Who are</a>
@@ -317,7 +314,7 @@
                     alt="Heart Icon"
                   />
                 </span>
-                <a href="./cart-page.html" class="icon-wrapper">
+                <span class="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="32px"
@@ -330,7 +327,7 @@
                     />
                   </svg>
                   <span class="cart-badge">2</span>
-                </a>
+                </span>
                 <span class="icon-wrapper">
                   <img
                     width="32"
@@ -426,208 +423,314 @@
     </div>
     <!-- Add Order Offcanvas -->
 
-    <section class="return-request-section">
-      <div class="container">
-        <div class="row justify-content-center g-4">
-          <!-- LEFT CARD: Invoice details -->
-          <div class="col-lg-6 col-md-10">
-            <div class="card-return invoice-summary-card">
-              <h2 class="card-title">Invoices details</h2>
+    <div class="faq-container">
+      <!-- Statr Breadcrumb -->
+      <div class="cart-breadcrumb">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 d-flex align-items-center gap-1">
+              <a href="./home-page.html" class="">
+                <img src="./images/icons/House.svg" alt="" /> <span>Home</span>
+              </a>
+              <span class="mx-1">
+                <img
+                  src="./images/icons/CaretRight.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                />
+              </span>
+              <span class="">Pages</span>
+              <span class="mx-1">
+                <img
+                  src="./images/icons/CaretRight.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                />
+              </span>
+              <span class="current">FAQs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Breadcrumb-->
 
-              <hr class="divider" />
+      <section class="faq-support-wrapper">
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <!-- LEFT: FAQ -->
+            <div class="col-lg-7">
+              <h2 class="mb-4 fw-semibold faq-main-title">
+                Frequently Asked Questions
+              </h2>
 
-              <p class="section-caption">Items for returns :</p>
+              <div class="accordion faq-accordion" id="faqAccordion">
+                <!-- Item 1 (مقفول) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeadingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseOne"
+                      aria-expanded="false"
+                      aria-controls="faqCollapseOne"
+                    >
+                      Suspendisse ultrices pharetra libero sed interdum.
+                    </button>
+                  </h2>
+                  <div
+                    id="faqCollapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="faqHeadingOne"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">محتوى تجريبي للسؤال الأول…</div>
+                  </div>
+                </div>
 
-              <!-- Product row -->
-              <div class="invoice-product-row">
-                <div class="product-left">
-                  <div class="product-thumb">
-                    <img
-                      src="./images/invoice/invoice-product.png"
-                      alt="Bose Sport Earbuds"
-                      width="64"
-                      height="64"
-                      loading="lazy"
+                <!-- Item 2 (مفتوح) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseTwo"
+                      aria-expanded="true"
+                      aria-controls="faqCollapseTwo"
+                    >
+                      Fusce molestie condimentum facilisis.
+                    </button>
+                  </h2>
+                  <div
+                    id="faqCollapseTwo"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="faqHeadingTwo"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="">
+                        Nulla malesuada iaculis nisi, vitae sagittis lacus
+                        laoreet in. Morbi aliquet pulvinar orci non vulputate.
+                        Donec aliquet ullamcorper gravida. Interdum et malesuada
+                        fames ac ante ipsum primis in faucibus. Sed molestie
+                        accumsan dui, non iaculis magna mattis id. Ut
+                        consectetur massa at viverra euismod.
+                      </p>
+                      <ul class="mb-0">
+                        <li>
+                          Vivamus sed est non arcu porta aliquet et vitae nulla.
+                        </li>
+                        <li>
+                          Integer et lacus vitae justo fermentum rutrum. In nec
+                          ultrices massa.
+                        </li>
+                        <li>
+                          Proin blandit nunc risus, at semper turpis sagittis
+                          nec.
+                        </li>
+                        <li>Quisque ut dolor erat.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeadingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseThree"
+                      aria-expanded="false"
+                      aria-controls="faqCollapseThree"
+                    >
+                      Quisque quis nunc quis urna tempor lobortis vel non orci.
+                    </button>
+                  </h2>
+                  <div
+                    id="faqCollapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="faqHeadingThree"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">نص تجريبي للسؤال الثالث…</div>
+                  </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeadingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseFour"
+                      aria-expanded="false"
+                      aria-controls="faqCollapseFour"
+                    >
+                      Donec rutrum ultrices ante nec malesuada. In accumsan eget
+                      nisi a rhoncus.
+                    </button>
+                  </h2>
+                  <div
+                    id="faqCollapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="faqHeadingFour"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">نص تجريبي للسؤال الرابع…</div>
+                  </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeadingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseFive"
+                      aria-expanded="false"
+                      aria-controls="faqCollapseFive"
+                    >
+                      Nulla sed sapien maximus, faucibus massa vitae.
+                    </button>
+                  </h2>
+                  <div
+                    id="faqCollapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="faqHeadingFive"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">نص تجريبي للسؤال الخامس…</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Support card -->
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4">
+              <div class="support-card">
+                <h3 class="support-title">
+                  Don’t find your answer, Ask for support.
+                </h3>
+                <p class="mb-4 support-text">
+                  Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                  Sed molestie accumsan dui, non iaculis primis in faucibus
+                  raesent eget sem purus.
+                </p>
+
+                <form>
+                  <div class="mb-3">
+                    <label for="">Email</label>
+                    <input
+                      type="email"
+                      class="form-control support-input"
+                      placeholder="example@gmail.com"
                     />
                   </div>
-                  <div>
-                    <p class="product-name">
-                      Bose Sport Earbuds – Wireless Earphones – Bluetooth In
-                      Ear…
-                    </p>
+                  <div class="mb-3">
+                    <label for="">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control support-input"
+                      placeholder="Subject"
+                    />
                   </div>
-                  <span class="product-qty">x1</span>
-                </div>
-
-                <div class="product-prices">
-                  <div class="price-line">
-                    <span class="price-label">Piece price:</span>
-                    <span class="price-value">
-                      99.00 <span class="price-currency">EGP</span>
-                    </span>
+                  <div class="mb-3">
+                    <textarea
+                      rows="4"
+                      class="form-control support-input"
+                      placeholder="Message"
+                    ></textarea>
                   </div>
-                  <div class="price-line">
-                    <span class="price-label">Total price:</span>
-                    <span class="price-value">
-                      99.00 <span class="price-currency">EGP</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <hr class="divider mt-3" />
-
-              <!-- Financial summary -->
-              <div class="financial-summary">
-                <p class="section-caption mb-2">Finical summary</p>
-
-                <div class="summary-row">
-                  <span class="summary-label">Subtotal</span>
-                  <span class="summary-value">99.00 EGP</span>
-                </div>
-
-                <div class="summary-row">
-                  <span class="summary-label">Delivery Fee</span>
-                  <span class="summary-value">99.00 EGP</span>
-                </div>
-
-                <hr class="divider my-2" />
-
-                <div class="summary-row total">
-                  <span class="summary-label">Total</span>
-                  <span class="summary-value" style="color: rgba(47, 47, 47, 1)"
-                    >99.00 EGP</span
-                  >
-                </div>
+                  <button type="submit" class="btn support-btn">
+                    Send message
+                  </button>
+                </form>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- RIGHT CARD: Choose return methods -->
-          <div class="col-lg-6 col-md-10">
-            <div class="card-return return-methods-card">
-              <h2 class="card-title">Choose return methods</h2>
-
-              <!-- Method 1 -->
-              <label class="return-method-option">
-                <input
-                  type="radio"
-                  name="return_method"
-                  value="credit"
-                  checked
-                  class="return-radio"
+      <!-- start Footer -->
+      <footer class="qs-footer">
+        <div class="container">
+          <!-- الصف العلوي -->
+          <div class="row align-items-start mb-5">
+            <!-- لوجو + بيانات -->
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+              <div class="qs-footer-logo mb-4">
+                <!-- عدّل مسار اللوجو -->
+                <img
+                  src="./images/logo.svg"
+                  alt="Quick Supply"
+                  class="img-fluid"
                 />
-                <div class="option-inner">
-                  <span class="custom-radio-circle"></span>
-                  <div class="option-text">
-                    <p class="option-title">Credit towards next order</p>
-                    <p class="option-desc">
-                      Receive a credit to your MediLedger account for future
-                      purchases. No fees apply.
-                    </p>
-                  </div>
-                </div>
-              </label>
+              </div>
 
-              <!-- Method 2 -->
-              <label class="return-method-option">
-                <input
-                  type="radio"
-                  name="return_method"
-                  value="special"
-                  class="return-radio"
-                />
-                <div class="option-inner">
-                  <span class="custom-radio-circle"></span>
-                  <div class="option-text">
-                    <p class="option-title">Special return (fees may apply)</p>
-                    <p class="option-desc">
-                      Refund to original payment method. Additional processing
-                      fees may apply based on product condition and return
-                      reason.
-                    </p>
-                  </div>
-                </div>
-              </label>
+              <div class="qs-footer-contact">
+                <p class="qs-footer-label mb-1">Customer Supports:</p>
+                <p class="qs-footer-phone mb-3">(629) 555-0129</p>
 
-              <button class="btn-request-return">Request Return</button>
+                <p class="qs-footer-text mb-3">
+                  4517 Washington Ave.<br />
+                  Manchester, Kentucky 39495
+                </p>
+
+                <p class="qs-footer-email mb-0">info@kinbo.com</p>
+              </div>
             </div>
+
+            <!-- الروابط -->
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+              <ul
+                class="qs-footer-nav list-unstyled d-flex justify-content-center gap-4 mb-0"
+              >
+                <li><a href="./home-page.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Benefits</a></li>
+              </ul>
+            </div>
+
+            <!-- السوشيال -->
+            <div class="col-12 col-lg-4">
+              <div
+                class="qs-footer-social d-flex justify-content-lg-end justify-content-center gap-3"
+              >
+                <a href="#" aria-label="Instagram"
+                  ><span><i class="fab fa-instagram"></i></span
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><span><i class="fab fa-twitter"></i></span
+                ></a>
+                <a href="#" aria-label="Pinterest"
+                  ><span><i class="fab fa-pinterest-p"></i></span
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><span><i class="fab fa-facebook-f"></i></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- الخط الفاصل -->
+          <hr class="qs-footer-divider" />
+
+          <!-- الكوبي رايت -->
+          <div class="qs-footer-bottom text-center">
+            <p class="mb-0">Copyright © 2025 tasawk.com.sa</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- start Footer -->
-    <footer class="qs-footer">
-      <div class="container">
-        <!-- الصف العلوي -->
-        <div class="row align-items-start mb-5">
-          <!-- لوجو + بيانات -->
-          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-            <div class="qs-footer-logo mb-4">
-              <!-- عدّل مسار اللوجو -->
-              <img
-                src="./images/logo.svg"
-                alt="Quick Supply"
-                class="img-fluid"
-              />
-            </div>
-
-            <div class="qs-footer-contact">
-              <p class="qs-footer-label mb-1">Customer Supports:</p>
-              <p class="qs-footer-phone mb-3">(629) 555-0129</p>
-
-              <p class="qs-footer-text mb-3">
-                4517 Washington Ave.<br />
-                Manchester, Kentucky 39495
-              </p>
-
-              <p class="qs-footer-email mb-0">info@kinbo.com</p>
-            </div>
-          </div>
-
-          <!-- الروابط -->
-          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-            <ul
-              class="qs-footer-nav list-unstyled d-flex justify-content-center gap-4 mb-0"
-            >
-              <li><a href="./home-page.html">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Benefits</a></li>
-            </ul>
-          </div>
-
-          <!-- السوشيال -->
-          <div class="col-12 col-lg-4">
-            <div
-              class="qs-footer-social d-flex justify-content-lg-end justify-content-center gap-3"
-            >
-              <a href="#" aria-label="Instagram"
-                ><span><i class="fab fa-instagram"></i></span
-              ></a>
-              <a href="#" aria-label="Twitter"
-                ><span><i class="fab fa-twitter"></i></span
-              ></a>
-              <a href="#" aria-label="Pinterest"
-                ><span><i class="fab fa-pinterest-p"></i></span
-              ></a>
-              <a href="#" aria-label="Facebook"
-                ><span><i class="fab fa-facebook-f"></i></span
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- الخط الفاصل -->
-        <hr class="qs-footer-divider" />
-
-        <!-- الكوبي رايت -->
-        <div class="qs-footer-bottom text-center">
-          <p class="mb-0">Copyright © 2025 tasawk.com.sa</p>
-        </div>
-      </div>
-    </footer>
-    <!-- End footer -->
+      </footer>
+      <!-- End footer -->
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -641,5 +744,18 @@
 
     <!-- Swiper JS -->
     <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+      document
+        .querySelectorAll(".faq-accordion .accordion-item")
+        .forEach((item) => {
+          const collapse = item.querySelector(".accordion-collapse");
+          collapse.addEventListener("shown.bs.collapse", () =>
+            item.classList.add("open")
+          );
+          collapse.addEventListener("hidden.bs.collapse", () =>
+            item.classList.remove("open")
+          );
+        });
+    </script>
   </body>
 </html>

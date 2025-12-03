@@ -1,0 +1,75 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+/* Start Cart */
+body {
+  background: #fff;
+  font-family: var(--font-public-sans);
+}
+.not-found-container {
+  padding-top: 5.05%;
+  padding-bottom: 5.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+}
+.contant-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contant-body h2 {
+  color: #191c1f;
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.contant-body p {
+  color: #475156;
+  font-weight: 400;
+  font-size: 18px;
+}
+.contant-body .btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contant-body .btn-group a {
+  border-radius: 16px;
+  padding: 16px 56px;
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+@media (max-width: 520px) {
+  .contant-body .btn-group {
+    flex-direction: column;
+  }
+  .contant-body .btn-group a {
+    width: 100%;
+  }
+  .contant-body img {
+    width: 100%;
+  }
+}
+.contant-body .btn-group a.go-back {
+  background-color: #196480;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.contant-body .btn-group a.go-home {
+  border: 1px solid #196480;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  color: #1570ef;
+}

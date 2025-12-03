@@ -1,0 +1,196 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+/* Start Cart */
+body {
+  background: #fff;
+  font-family: var(--font-public-sans);
+}
+
+/* Breadcrumb */
+.cart-breadcrumb {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 24px;
+  margin-bottom: 12px;
+  background-color: #f2f4f5;
+}
+
+.cart-breadcrumb a {
+  color: #5f6c72;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-family: var(--font-public-sans);
+}
+
+.cart-breadcrumb span.current {
+  color: #2da5f3;
+  font-weight: 500;
+  font-family: var(--font-public-sans);
+}
+/* End Bread Crumb */
+.faq-support-wrapper {
+  padding-top: 5.05%;
+  padding-bottom: 4.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+}
+
+/* العنوان الكبير */
+.faq-main-title {
+  font-size: 32px;
+  color: rgba(25, 28, 31, 1);
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+}
+
+/* شكل الأكورديون الأساسي */
+.faq-accordion .accordion-item {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(228, 231, 233, 1);
+}
+.faq-accordion .accordion-item.open {
+  box-shadow: 0px 8px 40px 0px #0000001f;
+  border-radius: 6px 6px 10px 10px;
+}
+.faq-accordion .accordion-collapse.show {
+  display: block;
+}
+/* زر السؤال (الهيدر) */
+.faq-accordion .accordion-button {
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(25, 28, 31, 1);
+  background-color: #ffffff;
+  border: none;
+  box-shadow: none;
+  flex-direction: row-reverse;
+  font-family: var(--font-public-sans);
+}
+
+/* إزالة السهم الافتراضي بتاع Bootstrap */
+.faq-accordion .accordion-button::after {
+  display: none;
+}
+
+/* أيقونة + / - بنضيفها من عندنا */
+.faq-accordion .accordion-button::before {
+  content: "+";
+  margin-left: auto;
+  font-size: 30px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+/* لما الأكورديون يبقى مفتوح */
+.faq-accordion .accordion-button:not(.collapsed) {
+  background-color: #0c6f88; /* الأزرق/التوركواز */
+  color: #ffffff;
+}
+
+/* الأيقونة في الحالة المفتوحة */
+.faq-accordion .accordion-button:not(.collapsed)::before {
+  content: "−";
+  color: #ffffff;
+}
+
+/* محتوى البودي */
+.faq-accordion .accordion-body {
+  padding: 24px;
+  background-color: #ffffff;
+}
+.faq-accordion .accordion-body p {
+  font-size: 14px;
+  color: #475156;
+  font-family: var(--font-public-sans);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.faq-accordion .accordion-body ul li {
+  margin-bottom: 8px;
+  color: #475156;
+  font-family: var(--font-public-sans);
+}
+/* الفورم على اليمين */
+.support-card {
+  background-color: #ecfdf3;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.support-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-family: var(--font-public-sans);
+}
+
+.support-text {
+  font-size: 14px;
+  color: #475156;
+  font-family: var(--font-public-sans);
+}
+form label {
+  color: #475467;
+  font-family: var(--poppins);
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.support-input {
+  border-radius: 10px;
+  border: 1px solid #f0eff9;
+  font-size: 14px;
+  padding: 16px 12px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+}
+
+.support-input:focus {
+  border-color: #0c6f88;
+  box-shadow: 0 0 0 0.15rem rgba(12, 111, 136, 0.25);
+}
+
+.support-btn {
+  background-color: #196480;
+  border-radius: 16px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  color: #f5faff;
+  font-weight: 500;
+  padding: 16px 29px;
+  font-family: var(--poppins);
+}
+
+.support-btn:hover {
+  background-color: #095269;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .faq-support-wrapper {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .faq-main-title {
+    font-size: 26px;
+  }
+
+  .support-card {
+    margin-top: 16px;
+  }
+}

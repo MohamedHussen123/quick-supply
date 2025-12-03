@@ -334,6 +334,87 @@
         </div>
       </nav>
     </header>
+
+    <!-- Add Order Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-add-order"
+      tabindex="-1"
+      id="addOrderOffcanvas"
+      aria-labelledby="addOrderOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="addOrderOffcanvasLabel">Add Order</h5>
+        <button
+          type="button"
+          class=""
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <img
+            loading="lazy"
+            src="./images/icons/close-square.svg"
+            width="24"
+            height="24"
+            alt="close-square"
+          />
+        </button>
+      </div>
+
+      <div class="offcanvas-body">
+        <form class="d-flex flex-column justify-content-between h-100">
+          <!-- Product name -->
+          <section>
+            <div class="mb-3">
+              <label class="form-label">Product name</label>
+              <input type="text" class="form-control" placeholder="*******" />
+            </div>
+
+            <!-- Category -->
+            <div class="mb-3">
+              <label class="form-label">Category</label>
+              <select class="form-select">
+                <option selected>Medical device</option>
+                <option>Medicine</option>
+                <option>Cosmetics</option>
+              </select>
+            </div>
+
+            <!-- Quantity -->
+            <div class="mb-3">
+              <label class="form-label">Quantity</label>
+              <select class="form-select">
+                <option selected>1</option>
+                <option>5</option>
+                <option>10</option>
+              </select>
+            </div>
+
+            <!-- Global code -->
+            <div class="mb-4">
+              <label class="form-label">Global code</label>
+              <input type="text" class="form-control" placeholder="*******" />
+            </div>
+          </section>
+
+          <!-- Bottom actions -->
+          <div class="d-flex gap-3 offcanvas-actions">
+            <button type="button" class="btn-upload-excel w-50">
+              <img
+                class="me-2"
+                src="./images/icons/upload.svg"
+                width="20"
+                height="20"
+                alt="upload"
+              />
+              Upload excel
+            </button>
+            <button type="submit" class="btn-confirm w-50">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Add Order Offcanvas -->
+
     <!-- Start Invoices Table -->
     <div class="invoices-page">
       <div class="container-fluid">
