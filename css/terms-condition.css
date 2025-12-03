@@ -1,0 +1,60 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+/* Start Cart */
+body {
+  background: #fff;
+  font-family: var(--font-public-sans);
+}
+.terms-conditions-container {
+  padding-top: 5.05%;
+  padding-bottom: 4.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+}
+.terms-conditions-container .page-title {
+  background-color: #2da5f3;
+  padding: 8px 16px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+.terms-conditions-container .title-paragraph {
+  margin-bottom: 32px;
+}
+.terms-conditions-container .title-paragraph .title {
+  color: #333333;
+  font-size: 32px;
+  font-family: var(--nunito);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.terms-conditions-container .title-paragraph .description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.terms-conditions-container .title-paragraph .description li {
+  color: #4f4f4f;
+  font-size: 18px;
+  font-family: var(--nunito);
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .terms-conditions-container .title-paragraph .description li {
+    width: 100%;
+  }
+}

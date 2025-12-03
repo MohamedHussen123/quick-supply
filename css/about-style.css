@@ -1,0 +1,71 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+}
+.about-container {
+  padding-top: 5.05%;
+  padding-bottom: 4.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+}
+* {
+  font-family: var(--font-public-sans);
+}
+.about-container .left-side {
+  padding: 2% 1%;
+}
+.about-container .left-side .page-title {
+  background-color: #2da5f3;
+  padding: 8px 16px;
+  border-radius: 2px;
+  width: fit-content;
+  font-family: var(--font-public-sans);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.about-container .left-side .title {
+  color: #191c1f;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.about-container .left-side .description {
+  color: #475156;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.about-container .left-side ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about-container .left-side ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.about-container .left-side ul li p {
+  margin-bottom: 0;
+  color: #191c1f;
+  font-size: 16px;
+  font-weight: 400;
+}
+.about-container .right-side img {
+  width: 100%;
+  max-height: 536px;
+  object-fit: cover;
+}
