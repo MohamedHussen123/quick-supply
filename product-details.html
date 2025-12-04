@@ -8,7 +8,7 @@
     <!-- bootstrap style -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- login style  -->
-    <link rel="stylesheet" href="./css/suppliers-profile-style.css" />
+    <link rel="stylesheet" href="./css/product-details-style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
 
@@ -51,6 +51,7 @@
     <!-- swiper css -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 </head>
+
 
 <body>
     <header>
@@ -300,340 +301,305 @@
     <!-- Add Order Offcanvas -->
 
 
-    <!-- Suppliers Profile & Ratings Page -->
-    <section class="supplier-hero-bg"></section>
+    <!-- ========== PRODUCT DETAILS PAGE ========== -->
+    <section class="product-page ">
+        <div class="">
 
-    <section class="supplier-page py-5">
-        <div class="container">
-            <div class="row justify-content-center g-4">
+            <!-- ===== TOP SECTION (Main product + seller card) ===== -->
+            <div class="row g-4">
 
-                <!-- LEFT: Doctor / Supplier card -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="supplier-card position-relative">
-                        <!-- Doctor image -->
-                        <div class="supplier-image mb-4">
-                            <img src="./images/home/40480c9aed12539ea082d14c2dd514b2f2ee9f25.jpg" alt="Doctor" />
-                        </div>
+                <!-- LEFT: Main product -->
+                <div class="col-lg-9">
+                    <div class="product-main-card p-4">
 
-                        <!-- Name & title -->
-                        <div class="d-flex justify-content-between">
-                            <h4 class="supplier-name mb-1">Abo trika</h4>
-                            <button class="fav-btn">
-                                <img width="45" height="45" src="./images/icons/Layer_1.svg" alt="">
-                            </button>
-                        </div>
-                        <p class="supplier-title mb-1">
-                            (Consultant) Ophthalmology
-                        </p>
-
-                        <!-- Location -->
-                        <p class="supplier-location mb-4">
-                            <img src="./images/icons/venus-mars 1.svg" width="32" height="32" alt="">
-                            Saudi Arabia, Al-Yasmin, Riyadh
-                        </p>
-
-                        <!-- Stats -->
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="stat-card text-center">
-                                    <div class="stat-icon mb-2">
-                                        <img src="./images/icons/star.svg" width="32" height="32" loading="lazy"
-                                            alt="Star">
+                        <div class="row g-4">
+                            <!-- Gallery -->
+                            <div class="col-md-6">
+                                <div class="product-gallery">
+                                    <!-- Main image -->
+                                    <div class="main-image mb-3">
+                                        <img id="mainProductImage"
+                                            src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                            alt="Product" />
                                     </div>
-                                    <div class="stat-value">4.8</div>
-                                    <div class="stat-label">Rating</div>
+
+                                    <!-- Thumbnails -->
+                                    <div class="thumbs-wrapper d-flex align-items-center gap-2 position-relative">
+                                        <button class="gallery-nav-btn left-btn" id="galleryPrevBtn">
+                                            <img src="./images/icons/ArrowLeft.svg" alt="">
+                                        </button>
+
+                                        <div class="thumbs-list d-flex gap-2 flex-grow-1">
+                                            <div class="thumb-item active">
+                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    alt="View 1" />
+                                            </div>
+                                            <div class="thumb-item">
+                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    alt="View 2" />
+                                            </div>
+                                            <div class="thumb-item">
+                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    alt="View 3" />
+                                            </div>
+                                            <div class="thumb-item">
+                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                    alt="View 4" />
+                                            </div>
+                                        </div>
+
+                                        <button class="gallery-nav-btn right-btn" id="galleryNextBtn">
+                                            <img src="./images/icons/ArrowRight.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Info -->
+                            <div class="col-md-6">
+                                <div class="product-info">
+
+                                    <!-- Rating -->
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-stars me-2">
+                                            <img src="./images/icons/orange-star.svg" alt="" />
+                                            <img src="./images/icons/orange-star.svg" alt="" />
+                                            <img src="./images/icons/orange-star.svg" alt="" />
+                                            <img src="./images/icons/orange-star.svg" alt="" />
+                                            <img src="./images/icons/orange-star.svg" alt="" />
+                                        </div>
+                                        <span class="rating-score me-1">4.7 Star Rating</span>
+                                        <span class="rating-count text-muted">(21,671 User feedback)</span>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <h4 class="product-title mb-4">
+                                        2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM,
+                                        256GB SSD Storage) - Space Gray
+                                    </h4>
+
+                                    <!-- SKU + brand + availability + category -->
+                                    <div class="row small availability  mb-2">
+                                        <div class="col-sm-6">
+                                            <div class="value">Sku: <span class="text-dark">A264671</span></div>
+                                            <div class="value">Brand: <span class="text-dark">Apple</span></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="value">
+                                                Availability:
+                                                <span class="stock-text">In Stock</span>
+                                            </div>
+                                            <div class="value">
+                                                Category:
+                                                <span class="text-dark">Electronics Devices</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Short description -->
+                                    <p class="product-short text-muted mb-3">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </p>
+
+                                    <!-- Price row -->
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="price-current me-3">$1699</span>
+                                        <span class="price-old me-2">$1999.00</span>
+                                        <span class="badge-discount">21% OFF</span>
+                                    </div>
+
+                                    <!-- Qty + Add to cart -->
+                                    <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                        <div class="qty-wrapper">
+                                            <select class="form-select qty-select">
+                                                <option selected>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+
+                                        <button
+                                            class="btn btn-add-main flex-grow-1 d-flex justify-content-center align-items-center gap-2">
+                                            <span>Add to cart</span>
+                                            <img src="./images/icons/cart-white.svg" alt="" width="16" height="16" />
+                                        </button>
+                                    </div>
+
+                                    <!-- Wishlist + share -->
+                                    <div class="d-flex flex-wrap align-items-center justify-content-between small">
+                                        <button class="btn btn-link p-0 text-muted d-flex align-items-center gap-2">
+                                            <img src="./images/icons/heart-line.svg" width="16" height="16" alt="" />
+                                            <span>Add to Wishlist</span>
+                                        </button>
+
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="text-muted">Share product:</span>
+                                            <a href="#" class="social-icon">
+                                                <img src="./images/icons/fb.svg" alt="" />
+                                            </a>
+                                            <a href="#" class="social-icon">
+                                                <img src="./images/icons/twitter.svg" alt="" />
+                                            </a>
+                                            <a href="#" class="social-icon">
+                                                <img src="./images/icons/insta.svg" alt="" />
+                                            </a>
+                                            <a href="#" class="social-icon">
+                                                <img src="./images/icons/pinterest.svg" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="stat-card text-center">
-                                    <div class="stat-icon mb-2">
-                                        <img src="./images/icons/package.svg" width="32" height="32" loading="lazy"
-                                            alt="Package">
-                                    </div>
-                                    <div class="stat-value">+12000</div>
-                                    <div class="stat-label">Patients</div>
-                                </div>
-                            </div>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- RIGHT: Ratings list -->
-                <div class="col-lg-8 col-md-6">
-                    <div class="reviews-card">
-                        <!-- Tabs -->
-                        <div class="reviews-tabs d-flex gap-3" role="tablist">
-                            <!-- Products tab -->
-                            <button class="tab-btn tab-btn-light flex-fill active" id="products-tab"
-                                data-bs-toggle="pill" data-bs-target="#products-pane" type="button" role="tab"
-                                aria-controls="products-pane" aria-selected="true">
-                                Products
-                            </button>
-
-                            <!-- Rating tab -->
-                            <button class="tab-btn tab-btn-light flex-fill" id="rating-tab" data-bs-toggle="pill"
-                                data-bs-target="#rating-pane" type="button" role="tab" aria-controls="rating-pane"
-                                aria-selected="false">
-                                Rating
-                            </button>
+                <!-- RIGHT: Seller card -->
+                <div class="col-lg-3">
+                    <div class="seller-card p-3">
+                        <div class="d-flex align-items-start justify-content-between mb-3">
+                            <div class="seller-avatar me-2">
+                                <img src="./images/home/83d429ee9aa4f196892f3189c4404f766b3f6732.jpg" alt="" />
+                            </div>
+                            <div>
+                                <p class="seller-label mb-0">Sold through</p>
+                                <p class="seller-name mb-0">Mohamed Trika</p>
+                            </div>
+                            <div>
+                                <img src="./images/icons/arrow-right.svg" alt="">
+                            </div>
                         </div>
 
-                        <div class="divider"></div>
+                        <p class="seller-text small text-muted mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
 
-                        <!-- Tab content -->
-                        <div class="tab-content">
-                            <!-- ================= PRODUCTS TAB ================= -->
-                            <!-- PRODUCTS TAB -->
-                            <div class="tab-pane fade show active" id="products-pane" role="tabpanel"
-                                aria-labelledby="products-tab">
-                                <div class="products-grid">
-                                    <div class="row g-3">
-
-                                        <!-- Card 1 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-discount">19% OFF</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="4K UHD LED Smart TV" />
-                                                </div>
-
-                                                <h6 class="product-title">
-                                                    4K UHD LED Smart TV with Chromecast Built-in
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="old-price">$865</span>
-                                                    <span class="new-price">$1,50</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <!-- Card 2 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-discount">25% OFF</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="Simple Mobile 4G LTE Prepaid Smartphone" />
-                                                </div>
-                                                <h6 class="product-title">
-                                                    Simple Mobile 4G LTE Prepaid Smartphone
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="new-price">$220</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <!-- Card 3 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-soldout">SOLD OUT</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="Bose Sport Earbuds" />
-                                                </div>
-
-                                                <h6 class="product-title">
-                                                    Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="new-price">$2,300</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <!-- Card 4 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-discount">19% OFF</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="4K UHD LED Smart TV" />
-                                                </div>
-
-                                                <h6 class="product-title">
-                                                    4K UHD LED Smart TV with Chromecast Built-in
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="old-price">$865</span>
-                                                    <span class="new-price">$1,50</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <!-- Card 5 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-discount">25% OFF</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="Simple Mobile 4G LTE Prepaid Smartphone" />
-                                                </div>
-
-                                                <h6 class="product-title">
-                                                    Simple Mobile 4G LTE Prepaid Smartphone
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="new-price">$220</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <!-- Card 6 -->
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="product-card">
-                                                <div class="product-image">
-                                                    <span class="badge-pill badge-soldout">SOLD OUT</span>
-                                                    <img src="./images/home/88570aa97b3dc20e58752dc88871db9c03da3d52.jpg"
-                                                        alt="Bose Sport Earbuds" />
-                                                </div>
-
-                                                <h6 class="product-title">
-                                                    Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...
-                                                </h6>
-
-                                                <div class="product-price mb-2">
-                                                    <span class="new-price">$2,300</span>
-                                                </div>
-
-                                                <button
-                                                    class="btn btn-add-cart w-100 d-flex justify-content-center align-items-center gap-2">
-                                                    <span>Add to cart</span>
-                                                    <img src="./images/home/shopping-cart.svg" alt="" width="16"
-                                                        height="16" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- ================= RATING TAB ================= -->
-                            <div class="tab-pane fade" id="rating-pane" role="tabpanel" aria-labelledby="rating-tab">
-                                <div class="reviews-list">
-                                    <!-- Row 1 -->
-                                    <div class="review-item d-flex align-items-start justify-content-between">
-                                        <div class="d-flex align-items-start flex-column gap-3">
-                                            <div class="review-avatar">AA</div>
-                                            <div>
-                                                <h6 class="review-name mb-1">Abdullah Al-Qahtani</h6>
-                                                <p class="review-text mb-0">
-                                                    doctor was very professional and explained my condition clearly.
-                                                    I felt comfortable from the first
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <span class="rating-pill">
-                                                <span class="rating-star">
-                                                    <img width="16" height="16" src="./images/icons/fast-star.svg"
-                                                        alt="" />
-                                                </span>
-                                                4.0
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Row 2 -->
-                                    <div class="review-item d-flex align-items-start justify-content-between">
-                                        <div class="d-flex align-items-start flex-column gap-3">
-                                            <div class="review-avatar">FA</div>
-                                            <div>
-                                                <h6 class="review-name mb-1">Faisal Al-Otaibi</h6>
-                                                <p class="review-text mb-0">
-                                                    doctor was very professional and explained my condition clearly.
-                                                    I felt comfortable from the first
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <span class="rating-pill">
-                                                <span class="rating-star">
-                                                    <img width="16" height="16" src="./images/icons/fast-star.svg"
-                                                        alt="" />
-                                                </span>
-                                                3.0
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Row 3 -->
-                                    <div class="review-item d-flex align-items-start justify-content-between">
-                                        <div class="d-flex align-items-start flex-column gap-3">
-                                            <div class="review-avatar">TA</div>
-                                            <div>
-                                                <h6 class="review-name mb-1">Turki Al-Shammari</h6>
-                                                <p class="review-text mb-0">
-                                                    doctor was very professional and explained my condition clearly.
-                                                    I felt comfortable from the first
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <span class="rating-pill">
-                                                <span class="rating-star">
-                                                    <img width="16" height="16" src="./images/icons/fast-star.svg"
-                                                        alt="" />
-                                                </span>
-                                                5.0
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="d-flex flex-wrap gap-2 small">
+                            <span class="seller-tag">Medical devices</span>
+                            <span class="seller-tag">+3</span>
                         </div>
                     </div>
-
                 </div>
 
             </div>
+
+            <!-- ===== OVERVIEW ===== -->
+            <div class="section-block mt-5">
+                <h5 class="section-title mb-3">Overview</h5>
+
+                <h6 class="section-subtitle mb-2">Description:</h6>
+                <p class="text-muted small mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <!-- ===== RELATED PRODUCTS ===== -->
+            <div class="section-block mt-5">
+                <h5 class="section-title mb-3">Related product</h5>
+
+                <div class="row g-3">
+                    <!-- Card 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="related-card">
+                            <div class="related-image">
+                                <span class="badge-pill badge-soldout">SOLD OUT</span>
+                                <img src="./images/products/rel-1.jpg" alt="" />
+                            </div>
+                            <h6 class="related-title">
+                                Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
+                            </h6>
+                            <div class="related-price mb-2">
+                                <span>$2,300</span>
+                            </div>
+                            <button
+                                class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
+                                <span>Add to cart</span>
+                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="related-card">
+                            <div class="related-image">
+                                <span class="badge-pill badge-discount-small">25% OFF</span>
+                                <img src="./images/products/rel-2.jpg" alt="" />
+                            </div>
+                            <h6 class="related-title">
+                                Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
+                            </h6>
+                            <div class="related-price mb-2">
+                                <span>$2,300</span>
+                            </div>
+                            <button
+                                class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
+                                <span>Add to cart</span>
+                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="related-card">
+                            <div class="related-image">
+                                <span class="badge-pill badge-soldout">SOLD OUT</span>
+                                <img src="./images/products/rel-3.jpg" alt="" />
+                            </div>
+                            <h6 class="related-title">
+                                Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
+                            </h6>
+                            <div class="related-price mb-2">
+                                <span>$2,300</span>
+                            </div>
+                            <button
+                                class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
+                                <span>Add to cart</span>
+                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="related-card">
+                            <div class="related-image">
+                                <span class="badge-pill badge-discount-small">25% OFF</span>
+                                <img src="./images/products/rel-4.jpg" alt="" />
+                            </div>
+                            <h6 class="related-title">
+                                Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
+                            </h6>
+                            <div class="related-price mb-2">
+                                <span>$2,300</span>
+                            </div>
+                            <button
+                                class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
+                                <span>Add to cart</span>
+                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-
-
 
 
     <!-- start Footer -->
@@ -703,6 +669,62 @@
 
     <!-- Swiper JS -->
     <script src="./js/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainImg = document.getElementById("mainProductImage");
+            const thumbImgs = Array.from(
+                document.querySelectorAll(".product-gallery .thumb-item img")
+            );
+            const prevBtn = document.getElementById("galleryPrevBtn");
+            const nextBtn = document.getElementById("galleryNextBtn");
+
+            if (!mainImg || thumbImgs.length === 0) return;
+
+            let currentIndex = 0;
+
+            function setActiveImage(index) {
+                currentIndex = index;
+
+                const img = thumbImgs[index];
+                const largeSrc = img.dataset.large || img.src;
+
+                mainImg.src = largeSrc;
+                mainImg.alt = img.alt || "";
+
+                // active border
+                thumbImgs.forEach((t) =>
+                    t.parentElement.classList.remove("active")
+                );
+                img.parentElement.classList.add("active");
+            }
+
+            // click on thumbnail
+            thumbImgs.forEach((img, index) => {
+                img.addEventListener("click", () => setActiveImage(index));
+            });
+
+            // prev / next buttons
+            if (prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    const newIndex =
+                        (currentIndex - 1 + thumbImgs.length) % thumbImgs.length;
+                    setActiveImage(newIndex);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener("click", () => {
+                    const newIndex = (currentIndex + 1) % thumbImgs.length;
+                    setActiveImage(newIndex);
+                });
+            }
+
+            // أول تحميل
+            setActiveImage(0);
+        });
+    </script>
+
 
 
 </body>
