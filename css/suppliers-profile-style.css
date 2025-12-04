@@ -1,0 +1,244 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+
+  --ibm-plex-sans-arabic: "IBM Plex Sans Arabic", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+/* Start Cart */
+body {
+  background: #fff;
+  font-family: var(--font-public-sans);
+}
+
+/* خلفية الهيرو اللي فوق */
+.supplier-hero-bg {
+  width: 100%;
+  height: 260px;
+  background-image: url("../images/home/bg-profile.svg"); /* غيّر المسار حسب عندك */
+  background-size: cover;
+  background-position: center;
+}
+
+/* خلفية عامة */
+.supplier-page {
+  margin-top: -140px; /* علشان الكروت تطلع فوق الخلفية */
+}
+
+/* الكارت الشمال */
+.supplier-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0px -12px 64px -12px rgba(100, 97, 193, 0.14);
+  position: relative;
+}
+
+/* صورة الدكتور */
+.supplier-image {
+  width: 166px;
+  height: 128px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.supplier-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* زرار القلب */
+.fav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #fff7f2;
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* نصوص */
+.supplier-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(16, 24, 40, 1);
+  font-family: var(--poppins);
+  font-style: normal;
+}
+
+.supplier-title {
+  font-size: 16px;
+  font-family: var(--poppins);
+  color: rgba(92, 92, 99, 1);
+}
+
+.supplier-location {
+  font-size: 12px;
+  font-family: var(--nunito);
+  color: rgba(16, 24, 40, 1);
+}
+
+.location-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f97316;
+  margin-right: 6px;
+}
+
+/* كروت الإحصائيات */
+.stat-card {
+  background-color: #eff8ff;
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 21px 10px;
+}
+
+.stat-icon {
+  font-size: 20px;
+}
+
+.stat-value {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a2951;
+}
+
+.stat-label {
+  font-family: var(--poppins);
+  font-weight: 400;
+  font-size: 14px;
+  color: #667085;
+}
+
+/* الكارت اليمين */
+.reviews-card {
+  box-shadow: 0px -12px 64px -12px #6461c124;
+  background-color: rgba(252, 252, 254, 1);
+  border-radius: 24px;
+  padding: 32px;
+}
+.reviews-card .divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(240, 239, 249, 1);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* التابات */
+.reviews-tabs {
+  overflow: hidden;
+}
+
+.tab-btn {
+  border: none;
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tab-btn-light {
+  background-color: #ffffff;
+  color: #101828;
+  border: 1px solid var(--brand-50-strock, #f0eff9);
+  border-radius: 12px;
+}
+
+.tab-btn.active {
+  background-color: #0c6f88;
+  border-radius: 12px;
+
+  color: #ffffff;
+}
+
+/* شريط السيرش الفاضي */
+.reviews-search {
+  padding: 16px 24px 8px;
+}
+
+.search-input {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: #f9fafb;
+  font-size: 14px;
+}
+
+/* قائمة الريفيو */
+/* .reviews-list {
+  padding: 0 24px 8px;
+} */
+
+.review-item {
+  padding: 16px;
+  border: 1px solid rgba(240, 239, 249, 1);
+  margin-bottom: 16px;
+  border-radius: 14px;
+}
+.review-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: rgba(239, 248, 255, 1);
+  color: rgba(46, 45, 60, 1);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-family: var(--nunito);
+  justify-content: center;
+  border: 1px solid rgba(239, 248, 255, 1);
+}
+
+.review-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(16, 24, 40, 1);
+  font-family: var(--nunito);
+}
+
+.review-text {
+  font-size: 14px;
+  color: rgba(102, 112, 133, 1);
+}
+
+/* البادج بتاع الريتينج */
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color:rgba(254, 240, 199, 1);
+  color: rgba(247, 144, 9, 1);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.rating-star {
+  font-size: 12px;
+}
+
+/* رسبونسف بسيط */
+@media (max-width: 991.98px) {
+  .supplier-page {
+    margin-top: -80px;
+  }
+
+  .reviews-card {
+    margin-top: 8px;
+  }
+}

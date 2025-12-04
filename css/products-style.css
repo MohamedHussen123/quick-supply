@@ -1,0 +1,383 @@
+:root {
+  --main-bg: #09232d;
+  --accent: #f3a622; /* لون اللينك النشط */
+  --text-muted-top: #c3d1d7;
+  --font-public-sans: "Public Sans", sans-serif;
+  --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --nunito: "Nunito", sans-serif;
+
+  --ibm-plex-sans-arabic: "IBM Plex Sans Arabic", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+/* Start Cart */
+body {
+  background: #fff;
+  font-family: var(--font-public-sans);
+}
+
+/* Page background */
+.orders-page {
+  background: #fff;
+  padding-top: 5.05%;
+  padding-bottom: 4.2%;
+  padding-left: 6.56%;
+  padding-right: 6.56%;
+}
+
+/* Wrapper اختياري لو حابب تستخدمه */
+.double-range {
+  width: 100%;
+  background-color: rgba(245, 250, 255, 1);
+  padding: 16px 10px;
+  border-radius: 16px;
+  border: 1px solid var(--Blue-50, rgba(239, 248, 255, 1));
+}
+#maxValue,
+#minValue {
+  color: rgba(55, 53, 106, 1);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+/* الكونتينر الأساسي */
+.range-slider {
+  position: relative;
+  height: 32px;
+}
+
+/* التراك الرمادي */
+.range-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  transform: translateY(-50%);
+}
+
+/* الجزء الأزرق بين البدايه والنهاية */
+.range-highlight {
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  border-radius: 999px;
+  background-color: #c9e6ee;
+  transform: translateY(-50%);
+  left: var(--minPos, 0%);
+  right: calc(100% - var(--maxPos, 100%));
+}
+
+/* الرينج inputs */
+.range-slider input[type="range"] {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  background: none;
+  pointer-events: none; /* علشان التراك ما يستقبلش كلكات */
+  -webkit-appearance: none;
+}
+
+/* THUMB: الدائرة نفسها - نفس شكل التصميم */
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto; /* الثمب بس اللي يستقبل الكلك */
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #0c6f88; /* مركز أزرق */
+  border: 4px solid #d3e9ee; /* الهاله الفاتحة حوالين الأزرق */
+  box-shadow: 0 0 0 4px rgba(12, 111, 136, 0.18); /* توهّج خفيف */
+  cursor: pointer;
+}
+
+.range-slider input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #0c6f88;
+  border: 4px solid #d3e9ee;
+  box-shadow: 0 0 0 4px rgba(12, 111, 136, 0.18);
+  cursor: pointer;
+}
+
+.range-slider input[type="range"]::-webkit-slider-runnable-track,
+.range-slider input[type="range"]::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: transparent; /* احنا عاملين التراك بــ .range-track فوق */
+}
+
+/* Filter card */
+.orders-card,
+.filter-card {
+  background: rgba(252, 252, 254, 1);
+  border-radius: 20px;
+  box-shadow: 0px -12px 64px -12px rgba(100, 97, 193, 0.14);
+  padding: 16px;
+}
+
+.filter-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(42, 41, 81, 1);
+  font-family: var(--poppins);
+  line-height: 30px;
+}
+
+.filter-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(71, 84, 103, 1);
+  font-family: var(--poppins);
+}
+
+.filter-sub-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Suppliers */
+.supplier-btn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 14.5px 12px;
+  font-size: 14px;
+  background-color: rgba(239, 248, 255, 1);
+  color: rgba(16, 24, 40, 1);
+  border: 1px solid transparent;
+  text-align: center;
+  font-family: var(--poppins);
+}
+
+.supplier-btn.active {
+  background-color: rgba(239, 248, 255, 1);
+  border-color: #0c6f88;
+  color: #0c6f88;
+  border: 1px solid rgba(25, 100, 128, 1);
+}
+.supplier-btn:hover {
+  border: 1px solid rgba(25, 100, 128, 1);
+}
+
+/* Start Product Container */
+
+.products-container {
+  background: rgba(252, 252, 254, 1);
+  border-radius: 20px;
+  box-shadow: 0px -12px 64px -12px rgba(100, 97, 193, 0.14);
+  padding: 40px;
+}
+
+.products-container .header p {
+  color: #191c1f;
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.products-container .header a {
+  color: #196480;
+  font-size: 14px;
+  font-family: var(--font-public-sans);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 5 كروت في الصف على الشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .col-xl-2-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.products-container p {
+  color: #01252b;
+}
+
+.browse-link {
+  color: #196480;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* البوكس الأبيض الكبير اللي فيه كل الكروت */
+.products-wrapper {
+  background: #ffffff;
+  border-radius: 24px 0 0 24px;
+  padding: 0px 11px 0px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  border: 1px solid rgba(228, 231, 233, 1);
+  /* overflow: hidden; علشان الـ border-radius يفضل مظبوط مهما قل عدد الكروت */
+}
+.products-wrapper .row .col-12 {
+  border-right: 1px solid rgba(228, 231, 233, 1);
+  border-bottom: 1px solid rgba(228, 231, 233, 1);
+  padding-bottom: 10px;
+}
+
+.products-wrapper .row .col-12:last-child {
+  border-right: none;
+}
+/* الكارد نفسه من غير border-radius */
+.product-card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  border-radius: 16px 16px 0 0;
+}
+
+/* الصورة */
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 188px; /* اختار أي ارتفاع يناسبك */
+  border-radius: 16px;
+  padding: 10px 0;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   border-radius: 16px;
+}
+
+/* البادج */
+.badge-status {
+  position: absolute;
+  left: -1px;
+  top: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.badge-grey {
+  background-color: #929fa5;
+}
+
+.badge-yellow {
+  background-color: #efd33d;
+}
+
+.badge-red {
+  background-color: #ee5858;
+}
+
+/* الأيقونات في hover – أفقية */
+.product-hover-icons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover .product-hover-icons {
+  opacity: 1;
+  visibility: visible;
+}
+.product-hover-icons button:hover {
+  background-color: #196480;
+}
+.product-hover-icons button:hover i {
+  filter: brightness(0) invert(1) !important;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-btn i {
+  font-size: 16px;
+  color: #196480;
+}
+
+/* نص الكارد */
+.product-body {
+  padding: 10px 8px 8px;
+  /* flex: 1 1 auto; */
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #191c1f;
+  margin-bottom: 8px;
+  min-height: 62px;
+  font-family: var(--font-public-sans);
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #196480;
+  font-family: var(--font-public-sans);
+}
+
+.audience-price {
+  font-size: 12px;
+  font-family: var(--poppins);
+  color: #faa62d;
+  display: none;
+}
+
+.audience-value {
+  color: #faa62d;
+}
+
+/* زرار Add to cart */
+.product-add-btn {
+  border: none;
+  width: 100%;
+  padding: 10px 16px;
+  background: #196480;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: var(--poppins);
+}
+
+.product-add-btn:hover {
+  background: #145066;
+}
+
+/* End Product Container */
