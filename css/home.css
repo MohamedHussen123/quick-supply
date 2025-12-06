@@ -40,6 +40,26 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 992px) {
+  .slide-content {
+    width: 100%;
+    padding: 0 77px;
+  }
+  .swiper-backface-hidden .swiper-slide{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #lottie-background-2, #lottie-background-3, #lottie-background{
+    height: 100%;
+    width: 55%;
+  }
+  .home-page-container .slide-container-parent .col-md-12{
+    max-width: 100% !important;
+    padding: 0 2% !important;
+  }
+}
+
+
 .slide-content h2 {
   font-size: 48px;
   font-weight: 700;

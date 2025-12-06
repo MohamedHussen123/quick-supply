@@ -117,10 +117,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Suppliers</a>
+              <a class="nav-link" href="./suppliers-page.html">Suppliers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Orders</a>
+              <a class="nav-link" href="./orders-page.html">Orders</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./returns-page.html">Returns</a>
@@ -129,7 +129,7 @@
               <a class="nav-link" href="./Invoices.html">Invoices</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Who are</a>
+              <a class="nav-link" href="./about-us.html">Who are</a>
             </li>
           </ul>
 
@@ -142,7 +142,7 @@
             </button>
 
 
-            <div class="nav-icons">
+            <div class="nav-icons flex-wrap">
               <span class="icon-wrapper">
                 <img src="./images/icons/message.svg" width="32" height="32" loading="lazy" alt="message icon">
               </span>
@@ -224,9 +224,9 @@
                 </svg>
                 <span class="cart-badge">2</span>
               </a>
-              <span class="icon-wrapper">
+              <a href="./profile-page.html" class="icon-wrapper">
                 <img width="32" height="32" src="./images/icons/User.svg" alt="User Icon">
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -239,7 +239,7 @@
 
 
     <!-- Start Slider -->
-    <div class="container mt-5">
+    <div class="container mt-5 slide-container-parent">
       <div class="row">
         <div class="col-md-12 px-5">
           <div class="hero-slider swiper">
@@ -1146,7 +1146,7 @@
                   Dell Optiplex 7000x7480 All-in-One Computer Monitor
                 </p>
 
-                <ul class="plan-features list-unstyled mb-0">
+                <ul class="plan-features list-unstyled mb-0 p-0">
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
@@ -1171,7 +1171,7 @@
                   Dell Optiplex 7000x7480 All-in-One Computer Monitor
                 </p>
 
-                <ul class="plan-features list-unstyled mb-0 text-white-50">
+                <ul class="plan-features list-unstyled mb-0 text-white-50 p-0">
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
@@ -1198,7 +1198,7 @@
                   Dell Optiplex 7000x7480 All-in-One Computer Monitor
                 </p>
 
-                <ul class="plan-features list-unstyled mb-0">
+                <ul class="plan-features list-unstyled mb-0 p-0">
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
                   <li><i class="fa-regular fa-circle-check me-2"></i>All limited</li>
@@ -1477,7 +1477,7 @@
     var swiper = new Swiper(".hero-slider", {
       loop: true,
       autoplay: {
-        delay: 2800,
+        delay: 280000,
         disableOnInteraction: false,
       },
       navigation: {
@@ -1542,6 +1542,19 @@
         clickable: false,
       },
       navigation: false,
+    });
+    document.querySelectorAll('.custom-select-topbar').forEach(select => {
+      select.addEventListener('change', function () {
+
+        if (this.value === "ar") {
+          document.documentElement.setAttribute("dir", "rtl");
+          document.documentElement.setAttribute("lang", "ar");
+        } else {
+          document.documentElement.setAttribute("dir", "ltr");
+          document.documentElement.setAttribute("lang", "en");
+        }
+
+      });
     });
 
 

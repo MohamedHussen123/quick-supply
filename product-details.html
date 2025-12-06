@@ -231,9 +231,9 @@
                                 </svg>
                                 <span class="cart-badge">2</span>
                             </span>
-                            <span class="icon-wrapper">
+                            <a href="./profile-page.html" class="icon-wrapper">
                                 <img width="32" height="32" src="./images/icons/User.svg" alt="User Icon" />
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
 
                 <!-- LEFT: Main product -->
                 <div class="col-lg-9">
-                    <div class="product-main-card p-4">
+                    <div class="product-main-card p-0">
 
                         <div class="row g-4">
                             <!-- Gallery -->
@@ -331,23 +331,23 @@
 
                                         <div class="thumbs-list d-flex gap-2 flex-grow-1">
                                             <div class="thumb-item active">
-                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
-                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                <img src="./images/home/37869f4082c7befe2960accf74182030b8dd18bd.jpg"
+                                                    data-large="./images/home/37869f4082c7befe2960accf74182030b8dd18bd.jpg"
                                                     alt="View 1" />
                                             </div>
                                             <div class="thumb-item">
-                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
-                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                <img src="./images/home/40480c9aed12539ea082d14c2dd514b2f2ee9f25.jpg"
+                                                    data-large="./images/home/40480c9aed12539ea082d14c2dd514b2f2ee9f25.jpg"
                                                     alt="View 2" />
                                             </div>
                                             <div class="thumb-item">
-                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
-                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                <img src="./images/home/42415bb02d4b5690dec49a23bf339f03110b3839.jpg"
+                                                    data-large="./images/home/42415bb02d4b5690dec49a23bf339f03110b3839.jpg"
                                                     alt="View 3" />
                                             </div>
                                             <div class="thumb-item">
-                                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
-                                                    data-large="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg"
+                                                <img src="./images/home/48ff818d77c73ee41ea402eaa60bb91c14e237d4.jpg"
+                                                    data-large="./images/home/48ff818d77c73ee41ea402eaa60bb91c14e237d4.jpg"
                                                     alt="View 4" />
                                             </div>
                                         </div>
@@ -384,7 +384,7 @@
                                     </h4>
 
                                     <!-- SKU + brand + availability + category -->
-                                    <div class="row small availability  mb-2">
+                                    <div class="row small availability  mb-4">
                                         <div class="col-sm-6">
                                             <div class="value">Sku: <span class="text-dark">A264671</span></div>
                                             <div class="value">Brand: <span class="text-dark">Apple</span></div>
@@ -402,7 +402,7 @@
                                     </div>
 
                                     <!-- Short description -->
-                                    <p class="product-short text-muted mb-3">
+                                    <p class="product-short mb-3">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -417,7 +417,7 @@
                                     </div>
 
                                     <!-- Qty + Add to cart -->
-                                    <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                    <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
                                         <div class="qty-wrapper">
                                             <select class="form-select qty-select">
                                                 <option selected>1</option>
@@ -430,30 +430,34 @@
                                         <button
                                             class="btn btn-add-main flex-grow-1 d-flex justify-content-center align-items-center gap-2">
                                             <span>Add to cart</span>
-                                            <img src="./images/icons/cart-white.svg" alt="" width="16" height="16" />
+                                            <img src="./images/home/shopping-cart.svg" alt="" width="20" height="20" />
                                         </button>
                                     </div>
 
                                     <!-- Wishlist + share -->
-                                    <div class="d-flex flex-wrap align-items-center justify-content-between small">
-                                        <button class="btn btn-link p-0 text-muted d-flex align-items-center gap-2">
-                                            <img src="./images/icons/heart-line.svg" width="16" height="16" alt="" />
+                                    <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                        <button class="wishlist-btn btn p-0 d-flex align-items-center gap-2">
+                                            <img src="./images/icons/gray-heart.svg" width="24" height="24" alt="" />
                                             <span>Add to Wishlist</span>
                                         </button>
 
                                         <div class="d-flex align-items-center gap-2">
-                                            <span class="text-muted">Share product:</span>
+                                            <span class="product-share">Share product:</span>
                                             <a href="#" class="social-icon">
-                                                <img src="./images/icons/fb.svg" alt="" />
+                                                <img src="./images/icons/Copy.svg" width="24" height="24" loading="lazy"
+                                                    alt="" />
                                             </a>
                                             <a href="#" class="social-icon">
-                                                <img src="./images/icons/twitter.svg" alt="" />
+                                                <img src="./images/icons/orange-facebook.svg" width="16" height="16"
+                                                    loading="lazy" alt="" />
                                             </a>
                                             <a href="#" class="social-icon">
-                                                <img src="./images/icons/insta.svg" alt="" />
+                                                <img src="./images/icons/grayTwitter.svg" width="16" height="16"
+                                                    loading="lazy" alt="" />
                                             </a>
                                             <a href="#" class="social-icon">
-                                                <img src="./images/icons/pinterest.svg" alt="" />
+                                                <img src="./images/icons/grayPinterest.svg" width="16" height="16"
+                                                    loading="lazy" alt="" />
                                             </a>
                                         </div>
                                     </div>
@@ -469,19 +473,21 @@
                 <div class="col-lg-3">
                     <div class="seller-card p-3">
                         <div class="d-flex align-items-start justify-content-between mb-3">
-                            <div class="seller-avatar me-2">
-                                <img src="./images/home/83d429ee9aa4f196892f3189c4404f766b3f6732.jpg" alt="" />
-                            </div>
-                            <div>
-                                <p class="seller-label mb-0">Sold through</p>
-                                <p class="seller-name mb-0">Mohamed Trika</p>
+                            <div class="d-flex align-start gap-2">
+                                <div class="seller-avatar me-2">
+                                    <img src="./images/home/83d429ee9aa4f196892f3189c4404f766b3f6732.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <p class="seller-label mb-0">Sold through</p>
+                                    <p class="seller-name mb-0">Mohamed Trika</p>
+                                </div>
                             </div>
                             <div>
                                 <img src="./images/icons/arrow-right.svg" alt="">
                             </div>
                         </div>
 
-                        <p class="seller-text small text-muted mb-3">
+                        <p class="seller-text mb-3">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
@@ -496,14 +502,14 @@
             </div>
 
             <!-- ===== OVERVIEW ===== -->
-            <div class="section-block mt-5">
-                <h5 class="section-title mb-3">Overview</h5>
+            <div class="section-block mt-4">
+                <h5 class="section-title mb-4">Overview</h5>
 
-                <h6 class="section-subtitle mb-2">Description:</h6>
-                <p class="text-muted small mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <h6 class="section-subtitle mb-4">Description:</h6>
+                <p class="overview-description mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat
                 </p>
             </div>
 
@@ -513,11 +519,11 @@
 
                 <div class="row g-3">
                     <!-- Card 1 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-0">
                         <div class="related-card">
                             <div class="related-image">
                                 <span class="badge-pill badge-soldout">SOLD OUT</span>
-                                <img src="./images/products/rel-1.jpg" alt="" />
+                                <img src="./images/home/2bd719cf2cf7d677966cfdd95ba494be02e54123.jpg" alt="" />
                             </div>
                             <h6 class="related-title">
                                 Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
@@ -528,17 +534,17 @@
                             <button
                                 class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
                                 <span>Add to cart</span>
-                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                                <img src="./images/home/shopping-cart.svg" alt="" width="20" height="20" />
                             </button>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-0">
                         <div class="related-card">
                             <div class="related-image">
                                 <span class="badge-pill badge-discount-small">25% OFF</span>
-                                <img src="./images/products/rel-2.jpg" alt="" />
+                                <img src="./images/home/40480c9aed12539ea082d14c2dd514b2f2ee9f25.jpg" alt="" />
                             </div>
                             <h6 class="related-title">
                                 Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
@@ -549,17 +555,17 @@
                             <button
                                 class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
                                 <span>Add to cart</span>
-                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                                <img src="./images/home/shopping-cart.svg" alt="" width="20" height="20" />
                             </button>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-0">
                         <div class="related-card">
                             <div class="related-image">
                                 <span class="badge-pill badge-soldout">SOLD OUT</span>
-                                <img src="./images/products/rel-3.jpg" alt="" />
+                                <img src="./images/home/42415bb02d4b5690dec49a23bf339f03110b3839.jpg" alt="" />
                             </div>
                             <h6 class="related-title">
                                 Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
@@ -570,17 +576,17 @@
                             <button
                                 class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
                                 <span>Add to cart</span>
-                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                                <img src="./images/home/shopping-cart.svg" alt="" width="20" height="20" />
                             </button>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-0">
                         <div class="related-card">
                             <div class="related-image">
                                 <span class="badge-pill badge-discount-small">25% OFF</span>
-                                <img src="./images/products/rel-4.jpg" alt="" />
+                                <img src="./images/home/7cdb208aa0ced481364a8011617d44674f21f8fc.jpg" alt="" />
                             </div>
                             <h6 class="related-title">
                                 Bose Sport Earbuds-Wireless Earphones-Bluetooth In Ear...
@@ -591,7 +597,7 @@
                             <button
                                 class="btn btn-add-related w-100 d-flex align-items-center justify-content-center gap-2">
                                 <span>Add to cart</span>
-                                <img src="./images/icons/cart-white.svg" alt="" width="14" height="14" />
+                                <img src="./images/home/shopping-cart.svg" alt="" width="20" height="20" />
                             </button>
                         </div>
                     </div>

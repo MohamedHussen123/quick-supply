@@ -136,47 +136,56 @@ body {
 .price-current {
   font-size: 22px;
   font-weight: 700;
-  color: #0c6f88;
+  color: rgba(45, 165, 243, 1);
+  font-family: var(--nunito);
 }
 
 .price-old {
-  font-size: 13px;
-  color: #9ca3af;
+  font-size: 18px;
+  color: rgba(119, 135, 143, 1);
   text-decoration: line-through;
+  font-family: var(--nunito);
 }
 
 .badge-discount {
   font-size: 11px;
   font-weight: 600;
-  background-color: #facc15;
-  color: #1f2937;
-  padding: 4px 8px;
-  border-radius: 999px;
+  background-color: rgba(239, 211, 61, 1);
+  color: rgba(25, 28, 31, 1);
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: var(--nunito);
 }
 
 /* الكمية */
 .qty-wrapper {
-  width: 80px;
+  width: 56px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .qty-select {
   border-radius: 10px;
   font-size: 14px;
+  background-color: rgba(240, 240, 240, 1);
 }
 
 /* زر Add to cart الرئيسي */
 .btn-add-main {
-  background-color: #0c6f88;
-  color: #ffffff;
+  background-color: rgba(25, 100, 128, 1);
+  color: rgba(245, 250, 255, 1);
   border-radius: 12px;
   padding: 10px 20px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+  font-family: var(--poppins);
+  box-shadow: 0px 1px 2px 0px rgba(56, 172, 177, 0.05);
 }
 
 .btn-add-main:hover {
   background-color: #09566a;
+  color: rgba(245, 250, 255, 1);
 }
 
 /* share icons */
@@ -190,8 +199,20 @@ body {
   background-color: #ffffff;
   border-radius: 20px;
   border: 1px solid rgba(240, 239, 249, 1);
+  width: 89%;
 }
-
+@media (max-width: 991.98px) {
+  .seller-card {
+    width: 100%;
+  }
+}
+.seller-card .seller-card {
+  font-size: 16px;
+  font-family: var(--poppins);
+  letter-spacing: 16px;
+  color: rgba(92, 92, 99, 1);
+  line-height: 24px;
+}
 .seller-avatar {
   width: 80px;
   height: 80px;
@@ -217,10 +238,12 @@ body {
 }
 
 .seller-tag {
-  background-color: #f3f4ff;
-  color: #4b5563;
+  background-color: rgba(239, 248, 255, 1);
+  color: rgba(16, 24, 40, 1);
   padding: 4px 8px;
-  border-radius: 999px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: var(--poppins);
 }
 
 /* السكشنات تحت */
@@ -229,32 +252,53 @@ body {
 }
 
 .section-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #111827;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--ibm-plex-sans-arabic);
+  color: rgba(0, 0, 0, 1);
 }
 
 .section-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
+  color: rgba(68, 68, 68, 1);
 }
-
+.wishlist-btn {
+  color: rgba(71, 81, 86, 1);
+  font-size: 14px;
+  font-weight: 400;
+}
+.product-share {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(71, 81, 86, 1);
+}
+.overview-description {
+  color: rgba(92, 92, 99, 1);
+  font-family: var(--poppins);
+  font-size: 16px;
+}
 /* المنتجات المرتبطة */
 .related-card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  padding: 10px 10px 14px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  background-color: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(228, 231, 233, 1);
+  border-bottom: 1px solid rgba(228, 231, 233, 1);
+  padding: 16px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  border-right: none; /* شيل الـ border-right عن الجميع */
 }
-
+.related-card:first-of-type {
+  border-left: 1px solid rgba(228, 231, 233, 1);
+}
+/* آخر كارت فقط يرجعله الـ border-right */
+.related-card:last-of-type {
+  border-right: 1px solid rgba(228, 231, 233, 1);
+}
 .related-image {
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
+
   margin-bottom: 8px;
 }
 
@@ -266,17 +310,18 @@ body {
 
 .badge-pill {
   position: absolute;
-  left: 10px;
-  top: 10px;
-  font-size: 10px;
+  left: -5px;
+  top: 0px;
+  font-size: 12px;
   font-weight: 600;
   padding: 4px 8px;
-  border-radius: 999px;
+  border-radius: 2px;
+  font-family: var(--nunito);
 }
 
 .badge-soldout {
-  background-color: #e5e7eb;
-  color: #6b7280;
+  background-color: rgba(146, 159, 165, 1);
+  color: #fff;
 }
 
 .badge-discount-small {
@@ -285,30 +330,37 @@ body {
 }
 
 .related-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  color: #111827;
+  color: rgba(25, 28, 31, 1);
   min-height: 40px;
+  font-family: var(--nunito);
+  margin-bottom: 8px;
 }
 
 .related-price span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  color: #0c6f88;
+  color: rgba(25, 100, 128, 1);
+  font-family: var(--nunito);
 }
 
 .btn-add-related {
-  background-color: #0c6f88;
-  color: #ffffff;
-  border-radius: 10px;
-  font-size: 12px;
-  padding: 8px 10px;
+  background-color: rgba(25, 100, 128, 1);
+  color: rgba(245, 250, 255, 1);
+  border-radius: 12px;
   border: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--poppins);
+  box-shadow: 0px 1px 2px 0px rgba(56, 172, 177, 0.05);
+  padding: 8px 10px;
   margin-top: auto;
 }
 
 .btn-add-related:hover {
   background-color: #09566a;
+  color: #fff;
 }
 
 /* رسبونسف */
