@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,38 +10,28 @@
   <!-- login style  -->
   <link rel="stylesheet" href="./css/home.css" />
   <link rel="stylesheet" href="./css/navbar.css" />
-
   <!-- font IBM Plex Sans Arabic -->
   <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
   <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
   <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
   <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
   <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
-
   <!-- font Poppins -->
   <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
   <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
   <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
   <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
   <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
-
   <!-- font Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-
   <!-- font Awesome -->
   <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css" />
-
   <!-- Select2 -->
   <link href="./css/select2.min.css" rel="stylesheet" />
-
   <!-- Stepper css -->
   <link rel="stylesheet" href="./css/stepper.css" />
-
   <!-- swiper css -->
   <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-
-
 </head>
 
 <body>
@@ -98,7 +88,7 @@
     <nav class="navbar navbar-expand-lg main-navbar">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./home-page.html">
           <!-- لو عندك لوجو حقيقي حط مساره هنا -->
           <img src="./images/logo.svg" alt="Quick Supply Logo" />
         </a>
@@ -242,7 +232,7 @@
     <div class="container mt-5 slide-container-parent">
       <div class="row">
         <div class="col-md-12 px-5">
-          <div class="hero-slider swiper">
+          <div class="hero-slider swiper" dir="ltr">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide hero-slide d-flex ">
@@ -387,11 +377,10 @@
             Credit Limit <span>100,000</span> | <span>30</span> Days
           </div>
         </div>
-
         <!-- Body -->
         <div class="credit-card-body">
           <!-- Remaining / Used -->
-          <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="used-remaining  mb-2">
             <div class="fw-semibold remaining">
               Remaining:
               <span class="fw-bold">100,000</span>
@@ -401,11 +390,9 @@
               <span class="fw-bold">0,00</span>
             </div>
           </div>
-
           <hr class="my-3" />
-
           <!-- Days left / Last updated -->
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="last-updated">
             <div class="text-primary-custom">
               Days left to pay:
               <span class="text-dark">6 days</span>
@@ -456,7 +443,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -502,7 +489,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -548,7 +535,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -592,7 +579,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -638,7 +625,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -684,7 +671,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -729,7 +716,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -774,7 +761,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -819,7 +806,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -864,7 +851,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()"  class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -906,7 +893,7 @@
           <h2 class="section-title mb-0">Suppliers</h2>
 
           <a href="#" class="browse-suppliers-link text-decoration-none d-flex align-items-center gap-1">
-            Browse All Suppliers
+            <span>Browse All Suppliers</span>
             <img src="./images/home/ArrowRight.svg" width="18" height="18" alt="Arrow Right" />
           </a>
         </div>
@@ -1231,7 +1218,7 @@
         <!-- Swiper -->
         <div class="row">
           <div class="col-12">
-            <div class="swiper shopCategoriesSwiper">
+            <div class="swiper shopCategoriesSwiper" dir="ltr">
               <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
@@ -1474,10 +1461,13 @@
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/lottie.min.js"></script>
   <script>
+    function goToProductDetails() {
+      window.location.href = "product-details.html";
+    }
     var swiper = new Swiper(".hero-slider", {
       loop: true,
       autoplay: {
-        delay: 280000,
+        delay: 2800,
         disableOnInteraction: false,
       },
       navigation: {
@@ -1556,6 +1546,7 @@
 
       });
     });
+
 
 
   </script>

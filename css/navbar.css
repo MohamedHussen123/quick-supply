@@ -428,3 +428,107 @@ header {
 .notification-dropdown .dropdown-menu {
   z-index: 1100;
 }
+
+
+/* ==================== MOBILE (max 768) ==================== */
+@media (max-width: 768px) {
+  /* نخلي الهيدر ثابت فوق */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+  }
+
+  /* Top bar فوق تبقى أخف شوية ومتقسمة تحت بعض */
+  .top-bar .container > .row > div {
+    text-align: left !important;
+    margin-bottom: 4px;
+  }
+
+  .top-bar .d-flex.align-items-center.gap-3 {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  /* لوجو النافبار أصغر شوية */
+  .navbar-brand img {
+    height: 44px;
+  }
+
+  .navbar-brand span.small-text {
+    font-size: 11px;
+  }
+
+  /* الخلفية جوا الـ collapse تبقى نفس لون الهيدر */
+  .navbar-collapse {
+    background-color: var(--main-bg);
+    padding: 12px 0 72px; /* padding تحت عشان ما يخبطش في البوتوم بار */
+  }
+
+  /* شكل اللينكات في القائمة المفتوحة */
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    padding-inline: 1rem;
+  }
+
+  /* زرار Add order يبقى فول ويتثبّت تحت اللينكات */
+  .btn-add-order {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  /* أيكون الهامبرجر */
+  .navbar-toggler {
+    border: 1px solid #ffffff33;
+    padding: 4px 8px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  /* البار بتاع الأيقونات تحت (زي الصورة) */
+  .nav-icons {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 16px;
+    margin-top: 0;
+    background-color: var(--main-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    justify-content: space-between;
+    gap: 0;
+    z-index: 1050;
+  }
+
+  .nav-icons .icon-wrapper,
+  .nav-icons .cart-icon {
+    font-size: 22px;
+  }
+
+  .nav-icons .cart-badge {
+    top: -6px;
+    right: -10px;
+  }
+}
+
+/* ==================== EXTRA SMALL (max 576) ==================== */
+@media (max-width: 576px) {
+  .top-bar {
+    font-size: 12px;
+  }
+
+  .custom-select-topbar {
+    font-size: 12px;
+  }
+
+  .top-bar .container {
+    padding-inline: 12px;
+  }
+}

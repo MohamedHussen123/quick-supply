@@ -33,6 +33,10 @@
     #196480 360.4deg
   );
 }
+.hero-slider,
+.hero-slider .swiper-wrapper {
+  direction: ltr;
+}
 .slide-content {
   width: 50%;
   padding: 20px;
@@ -45,20 +49,21 @@
     width: 100%;
     padding: 0 77px;
   }
-  .swiper-backface-hidden .swiper-slide{
+  .swiper-backface-hidden .swiper-slide {
     flex-direction: column;
     justify-content: space-between;
   }
-  #lottie-background-2, #lottie-background-3, #lottie-background{
+  #lottie-background-2,
+  #lottie-background-3,
+  #lottie-background {
     height: 100%;
     width: 55%;
   }
-  .home-page-container .slide-container-parent .col-md-12{
+  .home-page-container .slide-container-parent .col-md-12 {
     max-width: 100% !important;
     padding: 0 2% !important;
   }
 }
-
 
 .slide-content h2 {
   font-size: 48px;
@@ -131,6 +136,94 @@
   pointer-events: none; /* علشان ميبوظش أي كليك */
   overflow: hidden;
   margin: 0 auto;
+}
+
+/* ====== Tablet (لحد 992px) ====== */
+@media (max-width: 991.98px) {
+  .slide-container-parent .col-md-12 {
+    padding: 0 1.5rem; /* نقلل الـ padding شوية */
+  }
+
+  .hero-slide {
+    min-height: auto;
+    padding: 32px 20px 40px;
+    flex-direction: column-reverse; /* الكلام فوق والأنيميشن تحت */
+    text-align: center;
+  }
+
+  .slide-content {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .slide-content h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  #lottie-background,
+  #lottie-background-2,
+  #lottie-background-3 {
+    width: 70%;
+    height: 260px;
+    margin: 0 auto 12px;
+  }
+
+  .stats {
+    margin-top: 24px;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .stats .item h3 {
+    font-size: 24px;
+  }
+}
+
+/* ====== Mobile (لحد 576px) ====== */
+@media (max-width: 575.98px) {
+  .slide-container-parent .col-md-12 {
+    padding: 0 12px;
+  }
+
+  .hero-slide {
+    padding: 24px 16px 32px;
+    border-radius: 18px;
+    gap: 20px;
+  }
+
+  .slide-content h2 {
+    font-size: 24px;
+  }
+
+  .slide-content span {
+    padding: 4px 12px;
+  }
+
+  #lottie-background,
+  #lottie-background-2,
+  #lottie-background-3 {
+    width: 90%;
+    height: 220px;
+  }
+
+  .stats {
+    margin-top: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stats .item h3 {
+    font-size: 20px;
+  }
+
+  /* نخفي الأسهم في الموبايل ونسيب الـ dots بس */
+  .custom-prev,
+  .custom-next {
+    display: none !important;
+  }
 }
 
 /* Start Features style */
@@ -225,6 +318,33 @@
   padding: 16px 24px 18px;
   font-size: 15px;
 }
+.credit-container .credit-card-body .used-remaining {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credit-container .credit-card-body .last-updated {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .credit-container .credit-card-body .used-remaining {
+    flex-direction: column;
+    align-items: start;
+  }
+  .credit-container .credit-card-body .last-updated {
+    flex-direction: column;
+    align-items: start;
+  }
+  .credit-container .credit-card-body .last-updated img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .credit-container .credit-card-body .used {
   color: #196480;
   font-family: var(--poppins);
@@ -274,6 +394,31 @@
   border-right: 2px solid #c0c7cc;
   transform: rotate(45deg);
   border-radius: 2px;
+}
+
+/* ========== RTL Fixes for Credit Card ========== */
+:root[dir="rtl"] .credit-container .credit-card-header {
+  flex-direction: row-reverse;
+}
+
+:root[dir="rtl"] .credit-container .credit-card-header .credit-limit {
+  text-align: right;
+}
+
+/* الديسكتوب و التابلت بس (الموبايل انت عامله كولُم أصلاً) */
+@media (min-width: 769px) {
+  :root[dir="rtl"] .credit-container .credit-card-body .used-remaining,
+  :root[dir="rtl"] .credit-container .credit-card-body .last-updated {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+/* النصوص جوه الكارت في RTL تبقى يمين */
+:root[dir="rtl"] .credit-container .credit-card-body .remaining,
+:root[dir="rtl"] .credit-container .credit-card-body .used,
+:root[dir="rtl"] .credit-container .credit-card-body .text-primary-custom {
+  text-align: right;
 }
 
 /* End Style Credit */
@@ -545,6 +690,12 @@
   align-items: center;
 }
 
+:root[dir="rtl"] .rating-pill {
+  right: auto;
+  left: 16px;
+}
+
+
 /* التاجات تحت (Medical devices / +3) */
 .tag-pill {
   padding: 4px 12px;
@@ -757,7 +908,7 @@
 
 .qs-footer-label {
   font-size: 14px;
-  color: #77878F;
+  color: #77878f;
   font-family: var(--font-public-sans);
 }
 
@@ -780,7 +931,7 @@
 
 .qs-footer-nav a {
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
