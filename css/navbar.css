@@ -214,12 +214,28 @@ header {
   top: 18px;
   right: 29px;
   bottom: 20px;
+  z-index: 9999999;
 }
 .offcanvas-add-order {
   width: 657px !important;
   max-width: 100%;
   border-radius: 24px;
   padding: 24px 32px 28px;
+}
+@media (max-width: 768px) {
+  .offcanvas-add-order {
+    width: 80% !important;
+  }
+  .offcanvas.offcanvas-end{
+    right: 0 !important;
+  }
+  .offcanvas-actions{
+    flex-direction: column;
+  }
+  .offcanvas-actions button{
+    width: 100% !important;
+    margin-bottom: 12px;
+  }
 }
 
 /* نخلي الـ backdrop أغمق شوية زي الصورة */

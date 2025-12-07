@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <!-- bootstrap style -->
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <!-- login style  -->
-    <link rel="stylesheet" href="./css/register.css" />
 
-    <!-- font IBM Plex Sans Arabic -->
-    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
-    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
-    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
-    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
-    <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <!-- bootstrap style -->
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <!-- login style  -->
+  <link rel="stylesheet" href="./css/register.css" />
 
-    <!-- font Poppins -->
-    <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
-    <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
-    <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
-    <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
-    <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
-    <!-- public sans -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- font IBM Plex Sans Arabic -->
+  <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Bold.ttf" />
+  <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Regular.ttf" />
+  <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-SemiBold.ttf" />
+  <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Medium.ttf" />
+  <link rel="stylesheet" href="./fonts/IBMPlexSansArabic-Light.ttf" />
 
-    <!-- font Awesome -->
-    <link
-      rel="stylesheet"
-      href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css"
-    />
+  <!-- font Poppins -->
+  <link rel="stylesheet" href="./fonts/static/Poppins-Bold.ttf" />
+  <link rel="stylesheet" href="./fonts/static/Poppins-Regular.ttf" />
+  <link rel="stylesheet" href="./fonts/static/Poppins-SemiBold.ttf" />
+  <link rel="stylesheet" href="./fonts/static/Poppins-Medium.ttf" />
+  <link rel="stylesheet" href="./fonts/static/Poppins-Light.ttf" />
+  <!-- public sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Select2 -->
-    <link href="./css/select2.min.css" rel="stylesheet" />
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="./fonts/fontawesome-free-7.1.0-web/css/all.min.css" />
 
-    <!-- Stepper css -->
-    <link rel="stylesheet" href="./css/stepper.css" />
-  </head>
-  <body>
-    <div class="container-fluid register-container">
-      <div class="row mb-5">
-        <!-- Logo -->
-        <div class="col-md-12 px-0 logo-container">
-          <img
-            loading="lazy"
-            src="./images/logo.svg"
-            alt="Quick Supply logo"
-            width="309"
-          />
-        </div>
+  <!-- Select2 -->
+  <link href="./css/select2.min.css" rel="stylesheet" />
+
+  <!-- Stepper css -->
+  <link rel="stylesheet" href="./css/stepper.css" />
+</head>
+
+<body>
+  <div class="container-fluid register-container">
+    <div class="row mb-5">
+      <!-- Logo -->
+      <div class="col-md-12 px-0 logo-container">
+        <img loading="lazy" src="./images/logo.svg" alt="Quick Supply logo" width="309" />
       </div>
+    </div>
 
-      <div class="row">
-        <!-- Center form + stepper -->
-        <div class="col-md-10 form-wrapper">
-          <div class="header">
-            <h1>Create an account</h1>
-            <p class="subtitle">
-              Already have an account?
-              <a href="./login.html">Log in</a>
-            </p>
-          </div>
+    <div class="row">
+      <!-- Center form + stepper -->
+      <div class="col-md-10 form-wrapper">
+        <div class="header">
+          <h1>Create an account</h1>
+          <p class="subtitle">
+            Already have an account?
+            <a href="./login.html">Log in</a>
+          </p>
+        </div>
 
+
+        <form action="">
           <div id="stepper" class="bs-stepper">
             <div class="bs-stepper-header" role="tablist">
               <div class="step" data-target="#step-1">
@@ -108,21 +103,17 @@
                 <div class="step-content-inner">
                   <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="example@gmail.com"
-                      required
-                    />
+                    <input type="email" class="form-control" placeholder="example@gmail.com" required />
                   </div>
 
-                  <button
-                    type="button"
-                    class="btn-main"
-                    onclick="stepper.next()"
-                  >
-                    Next
-                  </button>
+                  <div class="actions-row">
+                   
+
+                    <button type="button" class="btn-main" onclick="stepper.next()">
+                      Next
+                    </button>
+                  </div>
+
                 </div>
               </div>
 
@@ -132,11 +123,7 @@
                   <div class="row g-3 mb-2">
                     <div class="col-md-6">
                       <label class="form-label">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Your name"
-                      />
+                      <input type="text" class="form-control" placeholder="Your name" />
                     </div>
 
                     <div class="col-md-6">
@@ -150,11 +137,7 @@
                           <option value="+971" data-short="AE">AE</option>
                         </select>
 
-                        <input
-                          type="tel"
-                          class="phone-input"
-                          placeholder="+1 (555) 000-0000"
-                        />
+                        <input type="tel" class="phone-input" placeholder="+1 (555) 000-0000" />
                       </div>
                     </div>
                   </div>
@@ -192,11 +175,11 @@
                   </div>
 
                   <div class="actions-row">
-                    <button
-                      type="button"
-                      class="btn-main"
-                      onclick="stepper.next()"
-                    >
+                    <button type="button" class="btn-back-mobile" onclick="stepper.previous()">
+                      Back
+                    </button>
+
+                    <button type="button" class="btn-main" onclick="stepper.next()">
                       Next
                     </button>
                   </div>
@@ -209,11 +192,7 @@
                   <div class="row g-3 mb-2">
                     <div class="col-md-6">
                       <label class="form-label">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Your name"
-                      />
+                      <input type="text" class="form-control" placeholder="Your name" />
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Type origin</label>
@@ -228,45 +207,32 @@
 
                   <div class="mb-3">
                     <label class="form-label">Commercial register</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Commercial"
-                    />
+                    <input type="text" class="form-control" placeholder="Commercial" />
                   </div>
 
                   <div class="mb-3">
                     <label class="form-label">Commercial number</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Commercial num"
-                    />
+                    <input type="text" class="form-control" placeholder="Commercial num" />
                   </div>
 
                   <div class="form-check mb-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="termsCheck"
-                    />
+                    <input class="form-check-input" type="checkbox" id="termsCheck" />
                     <label class="form-check-label terms-text" for="termsCheck">
                       I accept to <a href="#">terms and conditions</a>
                     </label>
                   </div>
 
                   <div class="actions-row">
-                    <button
-                      type="button"
-                      class="btn-main"
-                      onclick="stepper.next()"
-                    >
+                    <button type="button" class="btn-back-mobile" onclick="stepper.previous()">
+                      Back
+                    </button>
+
+                    <button type="button" class="btn-main" onclick="stepper.next()">
                       Next
                     </button>
                   </div>
                 </div>
               </div>
-
               <!-- ========== STEP 4: Password ========== -->
               <div id="step-4" class="content" role="tabpanel">
                 <div class="step-content-inner">
@@ -274,31 +240,15 @@
                     <div class="col-md-6">
                       <label class="form-label">Password</label>
                       <div class="password-wrapper">
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="password"
-                          placeholder="Password"
-                        />
-                        <i
-                          class="fa-regular fa-eye toggle-eye"
-                          data-target="password"
-                        ></i>
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                        <i class="fa-regular fa-eye toggle-eye" data-target="password"></i>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Confirm password</label>
                       <div class="password-wrapper">
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="confirmPassword"
-                          placeholder="Password"
-                        />
-                        <i
-                          class="fa-regular fa-eye toggle-eye"
-                          data-target="confirmPassword"
-                        ></i>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Password" />
+                        <i class="fa-regular fa-eye toggle-eye" data-target="confirmPassword"></i>
                       </div>
                     </div>
                   </div>
@@ -310,68 +260,71 @@
               </div>
             </div>
           </div>
-        </div>
+        </form>
+
       </div>
     </div>
+  </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap JS  -->
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/popper.min.js"></script>
+  <!-- Bootstrap JS  -->
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/popper.min.js"></script>
 
-    <!-- Select2 JS -->
-    <script src="./js/select2.min.js"></script>
-    <!-- Stepper JS -->
-    <script src="./js/stepper.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        window.stepper = new Stepper(document.querySelector("#stepper"), {
-          linear: false,
-          animation: false,
-        });
-        // Select2 init
-        $(".js-select").select2({
-          minimumResultsForSearch: -1, // يشيل السيرش
-          width: "100%", // يخلي العرض كامل
-        });
-        document.querySelectorAll(".toggle-eye").forEach((icon) => {
-          icon.addEventListener("click", () => {
-            const targetId = icon.getAttribute("data-target");
-            const field = document.getElementById(targetId);
-            if (!field) return;
+  <!-- Select2 JS -->
+  <script src="./js/select2.min.js"></script>
+  <!-- Stepper JS -->
+  <script src="./js/stepper.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.stepper = new Stepper(document.querySelector("#stepper"), {
+        linear: false,
+        animation: false,
+      });
+      // Select2 init
+      $(".js-select").select2({
+        minimumResultsForSearch: -1, // يشيل السيرش
+        width: "100%", // يخلي العرض كامل
+      });
+      document.querySelectorAll(".toggle-eye").forEach((icon) => {
+        icon.addEventListener("click", () => {
+          const targetId = icon.getAttribute("data-target");
+          const field = document.getElementById(targetId);
+          if (!field) return;
 
-            const isPassword = field.type === "password";
-            field.type = isPassword ? "text" : "password";
+          const isPassword = field.type === "password";
+          field.type = isPassword ? "text" : "password";
 
-            icon.classList.toggle("fa-eye");
-            icon.classList.toggle("fa-eye-slash");
-          });
-        });
-        $(".country-key-select").select2({
-          width: "120px",
-
-          templateResult: function (data) {
-            if (!data.id) return data.text;
-
-            let flag = $(data.element).data("flag");
-            let short = $(data.element).data("short");
-            let code = data.id;
-
-            // What appears in the dropdown list
-            return $(`<span>${flag} ${short} ${code}</span>`);
-          },
-
-          templateSelection: function (data) {
-            if (!data.id) return data.text;
-
-            // Only abbreviation in selected item
-            let short = $(data.element).data("short");
-            return $(`<span>${short}</span>`);
-          },
+          icon.classList.toggle("fa-eye");
+          icon.classList.toggle("fa-eye-slash");
         });
       });
-    </script>
-  </body>
+      $(".country-key-select").select2({
+        width: "120px",
+
+        templateResult: function (data) {
+          if (!data.id) return data.text;
+
+          let flag = $(data.element).data("flag");
+          let short = $(data.element).data("short");
+          let code = data.id;
+
+          // What appears in the dropdown list
+          return $(`<span>${flag} ${short} ${code}</span>`);
+        },
+
+        templateSelection: function (data) {
+          if (!data.id) return data.text;
+
+          // Only abbreviation in selected item
+          let short = $(data.element).data("short");
+          return $(`<span>${short}</span>`);
+        },
+      });
+    });
+  </script>
+</body>
+
 </html>

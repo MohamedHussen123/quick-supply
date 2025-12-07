@@ -118,3 +118,99 @@
   margin-top: 20px;
   box-shadow: 0px 1px 2px 0px #38ACB10D;
 }
+
+/* ✅ موبايل وتابلت لحد 768px */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1.5rem 1.25rem; /* تقليل الـ padding حوالين الصفحة */
+  }
+
+  .logo-container {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .logo-container img {
+    max-width: 190px;
+    height: auto;
+  }
+
+  .login-container .form-container {
+    padding: 0 0.5rem;
+  }
+
+  .login-container .form-container .header {
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .login-container .form-container .header h1 {
+    font-size: 24px;
+  }
+
+  .login-container .form-container .header p {
+    font-size: 13px;
+  }
+
+  .login-wrapper {
+    max-width: 100%;
+  }
+
+  .custom-tabs {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .custom-tabs button {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .form-control {
+    height: 46px;
+    font-size: 13px;
+  }
+
+  .toggle-eye {
+    font-size: 16px;
+    right: 12px;
+  }
+
+  .forgot-link {
+    font-size: 13px;
+  }
+
+  .btn-next {
+    height: 46px;
+    font-size: 15px;
+    margin-top: 16px;
+  }
+}
+
+/* 📱 موبايل صغير جداً تحت 576px */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 1.25rem 1rem;
+  }
+
+  .logo-container {
+    margin-bottom: 2.25rem;
+  }
+
+  .login-container .form-container .header h1 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .login-container .form-container .header p {
+    text-align: left;
+  }
+
+  .custom-tabs {
+    flex-direction: row;
+  }
+
+  .custom-tabs button {
+    font-size: 12px;
+  }
+}

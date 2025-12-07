@@ -346,3 +346,43 @@
 .phone-input:focus {
   outline: none;
 }
+
+/* back button hidden by default */
+.btn-back-mobile {
+  display: none;
+  border-radius: 16px;
+  height: 52px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--poppins);
+  width: 100%;
+}
+
+/* show only on mobile */
+@media (max-width: 576px) {
+  .btn-back-mobile {
+    display: block;
+  }
+
+  /* ترتيب الأزرار في الموبايل: Next فوق / Back تحت */
+  .actions-row {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
+
+
+/* Hide stepper header in mobile */
+@media (max-width: 576px) {
+  .bs-stepper-header {
+    display: none !important;
+  }
+
+  /* علشان الفورم ما يبقاش لازق لفوق */
+  .bs-stepper-content {
+    margin-top: 1rem;
+  }
+}
