@@ -194,3 +194,56 @@ form label {
     margin-top: 16px;
   }
 }
+
+/* RTL Overrides */
+[dir="rtl"] body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+/* Breadcrumb RTL */
+[dir="rtl"] .cart-breadcrumb {
+  text-align: right;
+}
+
+[dir="rtl"] .cart-breadcrumb a {
+  flex-direction: row-reverse; /* لو فيها أيقونة وسهم */
+}
+
+/* عنوان الـ FAQ */
+[dir="rtl"] .faq-main-title {
+  text-align: right;
+}
+
+/* الأكورديون في العربي */
+[dir="rtl"] .faq-accordion .accordion-button {
+  flex-direction: row; /* نرجعه طبيعي */
+  text-align: right;
+}
+
+[dir="rtl"] .faq-accordion .accordion-button::before {
+  margin-right: auto; /* بدل margin-left */
+  margin-left: 0;
+}
+
+/* البودي بتاع الأجوبة */
+[dir="rtl"] .faq-accordion .accordion-body {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-accordion .accordion-body p,
+[dir="rtl"] .faq-accordion .accordion-body ul li {
+  text-align: right;
+}
+
+/* الفورم على اليمين */
+[dir="rtl"] .support-card {
+  text-align: right;
+}
+
+[dir="rtl"] form label {
+  text-align: right;
+}
+
+[dir="rtl"] .support-input {
+  text-align: right; /* لو الأسئلة بالعربي */
+}

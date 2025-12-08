@@ -133,9 +133,9 @@ body {
   font-size: 12px;
   cursor: pointer;
 }
-.cart-remove:hover{
+.cart-remove:hover {
   border-color: #fca5a5;
-  color: #ef4444;  
+  color: #ef4444;
 }
 .cart-remove-danger {
   border-color: #fca5a5;
@@ -352,7 +352,7 @@ body {
 
 .summary-label {
   font-size: 14px;
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-weight: 500;
 }
 
@@ -363,9 +363,9 @@ body {
   outline: none;
   padding: 8px 10px;
 }
-.the-rest .total-summary-value{
-    font-weight: 500;
-    color: #4A4A4A;
+.the-rest .total-summary-value {
+  font-weight: 500;
+  color: #4a4a4a;
 }
 .summary-btn {
   width: 100%;
@@ -383,5 +383,18 @@ body {
 @media (max-width: 991.98px) {
   .summary-box {
     margin-top: 8px;
+  }
+}
+
+/* Scroll on small screens */
+@media (max-width: 767.98px) {
+  .cart-box {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling */
+  }
+
+  .cart-table-header,
+  .cart-table-row {
+    min-width: 720px;
   }
 }

@@ -55,8 +55,7 @@
           <a href="#">
             <img src="./images/icons/Instagram.svg" width="16" height="16" alt="Instagram Icon" /></a>
 
-          <div class="d-flex align-items-center gap-3 lang-currency ms-3 ps-3"
-            style="border-left: 1px solid rgba(255,255,255,0.3);">
+          <div class="d-flex align-items-center gap-3 lang-currency ms-3">
 
             <!-- Language -->
             <div class="custom-select-wrapper">
@@ -851,7 +850,7 @@
                   <button class="icon-btn" type="button">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
-                  <button onclick="goToProductDetails()"  class="icon-btn" type="button">
+                  <button onclick="goToProductDetails()" class="icon-btn" type="button">
                     <i class="fa-regular fa-eye"></i>
                   </button>
                 </div>
@@ -1533,23 +1532,8 @@
       },
       navigation: false,
     });
-    document.querySelectorAll('.custom-select-topbar').forEach(select => {
-      select.addEventListener('change', function () {
-
-        if (this.value === "ar") {
-          document.documentElement.setAttribute("dir", "rtl");
-          document.documentElement.setAttribute("lang", "ar");
-        } else {
-          document.documentElement.setAttribute("dir", "ltr");
-          document.documentElement.setAttribute("lang", "en");
-        }
-
-      });
-    });
-
-
-
   </script>
+  <script src="./js/lang-script.js"></script>
 </body>
 
 </html>

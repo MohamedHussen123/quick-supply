@@ -37,6 +37,20 @@ header {
   font-size: 14px;
   color: #fff;
 }
+/* ---------- English (LTR) ---------- */
+[dir="ltr"] .top-bar .container .lang-currency {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: none;
+  padding-left: 1rem;
+}
+
+/* ---------- Arabic (RTL) ---------- */
+[dir="rtl"] .top-bar .container .lang-currency {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: none;
+  padding-left: none;
+  padding-right: 1rem;
+}
 
 /* Wrapper for alignment */
 .custom-select-wrapper {
@@ -226,13 +240,13 @@ header {
   .offcanvas-add-order {
     width: 80% !important;
   }
-  .offcanvas.offcanvas-end{
+  .offcanvas.offcanvas-end {
     right: 0 !important;
   }
-  .offcanvas-actions{
+  .offcanvas-actions {
     flex-direction: column;
   }
-  .offcanvas-actions button{
+  .offcanvas-actions button {
     width: 100% !important;
     margin-bottom: 12px;
   }
@@ -445,7 +459,6 @@ header {
   z-index: 1100;
 }
 
-
 /* ==================== MOBILE (max 768) ==================== */
 @media (max-width: 768px) {
   /* نخلي الهيدر ثابت فوق */
@@ -546,5 +559,56 @@ header {
 
   .top-bar .container {
     padding-inline: 12px;
+  }
+}
+
+/* ---------- Fix responsiveness at 1400px ---------- */
+@media (max-width: 1400px) {
+  /* Reduce logo size */
+  .navbar-brand img {
+    height: 48px;
+  }
+
+  /* Reduce nav link padding */
+  .navbar-nav .nav-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 16px;
+  }
+
+  /* Adjust add order button */
+  .btn-add-order {
+    min-width: 120px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Reduce icon gap */
+  .nav-icons {
+    gap: 0.7rem;
+  }
+
+  .nav-icons img,
+  .nav-icons svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  /* Reduce cart badge position */
+  .nav-icons .cart-badge {
+    top: -4px;
+    right: -6px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  /* Top bar spacing */
+  .top-bar .container {
+    text-align: center;
+  }
+
+  .top-bar .d-flex {
+    justify-content: center;
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -68,8 +68,7 @@
                     <a href="#">
                         <img src="./images/icons/Instagram.svg" width="16" height="16" alt="Instagram Icon" /></a>
 
-                    <div class="d-flex align-items-center gap-3 lang-currency ms-3 ps-3"
-                        style="border-left: 1px solid rgba(255,255,255,0.3);">
+                    <div class="d-flex align-items-center gap-3 lang-currency ms-3 ps-3">
 
                         <!-- Language -->
                         <div class="custom-select-wrapper">
@@ -365,99 +364,104 @@
                     </div>
 
                     <!-- Shopping Cart box -->
-                    <div class="cart-box">
-                        <h3 class="cart-title mb-0">Shopping Cart</h3>
-                        <!-- Header row -->
-                        <div class="cart-table-header d-flex">
-                            <div class="col-5">Products</div>
-                            <div class="col-2 text-center">Price</div>
-                            <div class="col-2 text-center">Discount rate</div>
-                            <div class="col-2 text-center">Quantity</div>
-                            <div class="col-1 text-center">Sub-total</div>
-                        </div>
+                    <div class="cart-table-wrappe">
 
-                        <!-- Row 1 -->
-                        <div class="cart-table-row d-flex align-items-center">
-                            <div class="col-5 d-flex align-items-center gap-3">
-                                <span class="cart-remove">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </span>
-                                <div class="cart-product-img">
-                                    <!-- عدل الصورة -->
-                                    <img src="./images/icons/Frame.svg" width="32" height="32" loading="lazy" alt="">
+
+                        <div class="cart-box">
+                            <h3 class="cart-title mb-0">Shopping Cart</h3>
+                            <!-- Header row -->
+                            <div class="cart-table-header d-flex">
+                                <div class="col-5">Products</div>
+                                <div class="col-2 text-center">Price</div>
+                                <div class="col-2 text-center">Discount rate</div>
+                                <div class="col-2 text-center">Quantity</div>
+                                <div class="col-1 text-center">Sub-total</div>
+                            </div>
+
+                            <!-- Row 1 -->
+                            <div class="cart-table-row d-flex align-items-center">
+                                <div class="col-5 d-flex align-items-center gap-3">
+                                    <span class="cart-remove">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                    <div class="cart-product-img">
+                                        <!-- عدل الصورة -->
+                                        <img src="./images/icons/Frame.svg" width="32" height="32" loading="lazy"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <div class="cart-product-name">Sterile Bandage Rolls</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="cart-product-name">Sterile Bandage Rolls</div>
+
+                                <div class="col-2 text-center">
+                                    <span class="cart-old-price">$99</span>
+                                    <span class="cart-new-price">$70</span>
                                 </div>
-                            </div>
 
-                            <div class="col-2 text-center">
-                                <span class="cart-old-price">$99</span>
-                                <span class="cart-new-price">$70</span>
-                            </div>
-
-                            <div class="col-2 text-center">
-                                16%
-                            </div>
-
-                            <div class="col-2 text-center">
-                                <div class="qty-control mx-auto">
-                                    <button class="qty-btn" type="button">−</button>
-                                    <input class="qty-value" type="text" value="01" readonly />
-                                    <button class="qty-btn" type="button">+</button>
+                                <div class="col-2 text-center">
+                                    16%
                                 </div>
-                            </div>
 
-                            <div class="col-1 text-center">
-                                $70
-                            </div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="cart-table-row d-flex align-items-center">
-                            <div class="col-5 d-flex align-items-center gap-3">
-                                <span class="cart-remove">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </span>
-                                <div class="cart-product-img">
-                                    <img src="./images/icons/supples.svg" width="32" height="32" loading="lazy" alt="">
+                                <div class="col-2 text-center">
+                                    <div class="qty-control mx-auto">
+                                        <button class="qty-btn" type="button">−</button>
+                                        <input class="qty-value" type="text" value="01" readonly />
+                                        <button class="qty-btn" type="button">+</button>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="cart-product-name">Disposable Syringes (20ml)</div>
+
+                                <div class="col-1 text-center">
+                                    $70
                                 </div>
                             </div>
 
-                            <div class="col-2 text-center">
-                                <span class="cart-new-price">$250</span>
-                            </div>
+                            <!-- Row 2 -->
+                            <div class="cart-table-row d-flex align-items-center">
+                                <div class="col-5 d-flex align-items-center gap-3">
+                                    <span class="cart-remove">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                    <div class="cart-product-img">
+                                        <img src="./images/icons/supples.svg" width="32" height="32" loading="lazy"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <div class="cart-product-name">Disposable Syringes (20ml)</div>
+                                    </div>
+                                </div>
 
-                            <div class="col-2 text-center">
-                                20%
-                            </div>
+                                <div class="col-2 text-center">
+                                    <span class="cart-new-price">$250</span>
+                                </div>
 
-                            <div class="col-2 text-center">
-                                <div class="qty-control mx-auto">
-                                    <button class="qty-btn" type="button">−</button>
-                                    <input class="qty-value" type="text" value="03" readonly />
-                                    <button class="qty-btn" type="button">+</button>
+                                <div class="col-2 text-center">
+                                    20%
+                                </div>
+
+                                <div class="col-2 text-center">
+                                    <div class="qty-control mx-auto">
+                                        <button class="qty-btn" type="button">−</button>
+                                        <input class="qty-value" type="text" value="03" readonly />
+                                        <button class="qty-btn" type="button">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-1 text-center">
+                                    $250
                                 </div>
                             </div>
 
-                            <div class="col-1 text-center">
-                                $250
-                            </div>
-                        </div>
-
-                        <!-- Footer row (Update cart) -->
-                        <!-- <div class="d-flex justify-content-end mt-3 pb-4 px-3">
+                            <!-- Footer row (Update cart) -->
+                            <!-- <div class="d-flex justify-content-end mt-3 pb-4 px-3">
                             <button class="update-cart-btn" type="button">
                                 <img src="./images/icons/plus-blue.svg" width="20" height="20" alt="Plus"
                                     loading="lazy">
                                 Update cart
                             </button>
                         </div> -->
+                        </div>
                     </div>
-
                     <!-- Payment option -->
                     <div class="payment-card mb-3">
                         <div class="payment-card-header">
@@ -698,6 +702,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
 
 
+    <script src="./js/lang-script.js"></script>
 
 </body>
 

@@ -19,10 +19,24 @@ body {
 /* خلفية الهيرو اللي فوق */
 .supplier-hero-bg {
   width: 100%;
-  height: 260px;
+ height: clamp(180px, 30vw, 260px);
   background-image: url("../images/home/bg-profile.svg"); /* غيّر المسار حسب عندك */
   background-size: cover;
   background-position: center;
+}
+/* تظبيط أكتر للموبايل الصغير */
+@media (max-width: 576px) {
+  .supplier-hero-bg {
+    height: 200px; /* تقل شوية على الموبايل */
+    background-position: top; /* لو الصورة فيها تفاصيل في الجزء العلوي */
+  }
+}
+
+/* لو عايزها أعلى شوية على التابلت */
+@media (min-width: 768px) and (max-width: 991px) {
+  .supplier-hero-bg {
+    height: 240px;
+  }
 }
 
 /* خلفية عامة */
@@ -285,7 +299,7 @@ body {
 
 .badge-discount {
   background-color: rgba(239, 211, 61, 1);
-  color:  rgba(25, 28, 31, 1);
+  color: rgba(25, 28, 31, 1);
 }
 
 .badge-soldout {
