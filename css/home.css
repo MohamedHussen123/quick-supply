@@ -8,7 +8,10 @@
   --nunito: "Nunito", sans-serif;
 }
 /* start Slider style */
-
+/* header{
+  position: relative;
+  z-index: 999999999;
+} */
 .hero-slider {
   border-radius: 22px;
   overflow: hidden;
@@ -62,6 +65,39 @@
   .home-page-container .slide-container-parent .col-md-12 {
     max-width: 100% !important;
     padding: 0 2% !important;
+  }
+}
+
+.home-page-container {
+  position: relative;
+  isolation: isolate; /* يخلي الـ ::before ليه layer خاصة */
+  overflow: hidden;   /* عشان لو الخلفية اتحركت برا شوية */
+}
+
+/* الخلفية المتحركة جوه الـ container بس */
+.home-page-container::before {
+  content: "";
+  position: absolute;   /* بدل fixed */
+  inset: 0;             /* تملى مساحة الـ container بس */
+  z-index: -1;          /* ورا المحتوى بتاع الصفحة */
+  background-image: url("../images/home/BG.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center top;
+  opacity: 1;           /* قللها لو عايزها أهدى 0.6 مثلاً */
+  pointer-events: none;
+  animation: bgFloat 40s linear infinite alternate;
+}
+
+@keyframes bgFloat {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center 60px;
+  }
+  100% {
+    background-position: center top;
   }
 }
 
@@ -694,7 +730,6 @@
   right: auto;
   left: 16px;
 }
-
 
 /* التاجات تحت (Medical devices / +3) */
 .tag-pill {

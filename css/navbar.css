@@ -608,7 +608,11 @@ header {
     text-align: center;
   }
 
-  .top-bar .d-flex {
-    justify-content: center;
+  .top-bar .d-flex.align-items-center.gap-3 {
+    justify-content: start;
+    margin-top: 5px;
+  }
+  .lang-currency{
+    margin-left: 0 !important;
   }
 }
