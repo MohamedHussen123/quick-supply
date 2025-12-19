@@ -298,9 +298,11 @@ body {
   opacity: 1;
   visibility: visible;
 }
+.product-hover-icons a:hover,
 .product-hover-icons button:hover {
   background-color: #196480;
 }
+.product-hover-icons a:hover i,
 .product-hover-icons button:hover i {
   filter: brightness(0) invert(1) !important;
 }
