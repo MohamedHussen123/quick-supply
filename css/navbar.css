@@ -225,10 +225,15 @@ header {
 
 /* ===== Add Order Offcanvas ===== */
 .offcanvas.offcanvas-end {
-  top: 18px;
-  right: 29px;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  top: 18px; /* زي ما إنتي محتاجه */
   bottom: 20px;
   z-index: 9999999;
+}
+.offcanvas-add-order.show {
+  transform: translateX(-50%) !important;
 }
 .offcanvas-add-order {
   width: 657px !important;
@@ -612,7 +617,7 @@ header {
     justify-content: start;
     margin-top: 5px;
   }
-  .lang-currency{
+  .lang-currency {
     margin-left: 0 !important;
   }
 }
