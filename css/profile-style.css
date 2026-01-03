@@ -204,3 +204,101 @@ body {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.9);
 }
+
+.change-password-modal .modal-content {
+  border-radius: 16px;
+  padding: 20px 22px 24px;
+}
+
+.change-password-modal .modal-title {
+  font-size: 14px;
+  color: #000000;
+  font-family: var(--ibm-plex-sans-arabic);
+}
+
+.change-password-modal .form-label {
+  font-size: 16px;
+  color: #475467;
+  font-weight: 400;
+  font-family: var(--nunito);
+}
+
+.change-password-modal .password-input {
+  padding: 16px 12px;
+  border: 1px solid #f0eff9;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  border-radius: 12px;
+}
+
+.change-password-modal .password-eye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.change-password-modal .password-eye i {
+  font-size: 16px;
+  color: #474747;
+}
+.btn-save {
+  background-color: #0f607a;
+  border-color: #0f607a;
+  color: #ffffff;
+  border-radius: 999px;
+  padding-block: 0.7rem;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.btn-save:hover {
+  background-color: #0c4e63;
+  border-color: #0c4e63;
+}
+
+/* Delete account modal base */
+.delete-account-modal .modal-content {
+  border-radius: 16px;
+  padding: 20px 22px 24px;
+}
+
+.delete-account-modal .modal-title {
+  font-size: 1rem;
+}
+
+/* Input + eye icon */
+.delete-account-modal .delete-password-input {
+  padding: 16px 12px;
+  border: 1px solid #f0eff9;
+  box-shadow: 0px 1px 2px 0px #38acb10d;
+  border-radius: 12px;
+}
+
+.delete-account-form label{
+  font-size: 14px;
+  font-family: var(--poppins);
+  color: rgba(71, 84, 103, 1);
+  margin-bottom: 6px;
+}
+.delete-account-modal .delete-password-eye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #474747;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Delete button (full width, red) */
+.btn-delete-account {
+  color: #e0342c;
+  font-family: var(--ibm-plex-sans-arabic);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+  padding: 0;
+}

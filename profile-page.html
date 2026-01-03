@@ -393,7 +393,8 @@
 
                                     <!-- Change password -->
                                     <div class="mb-4">
-                                        <button type="button" class="btn btn-link p-0 change-password-link">
+                                        <button type="button" class="btn btn-link p-0 change-password-link"
+                                            data-bs-toggle="modal" data-bs-target="#changePasswordModal">
                                             <span class="me-2">
                                                 <img src="./images/icons/lock.svg" alt="" width="18" height="18" />
                                             </span>
@@ -401,13 +402,20 @@
                                         </button>
                                     </div>
 
+
+
+
+
+
                                     <!-- Save button -->
                                     <button type="submit" class="btn btn-save w-100 mb-3">
                                         Save changes
                                     </button>
 
                                     <!-- Delete account -->
-                                    <button type="button" class="btn btn-link p-0 delete-account-link">
+                                    <!-- Delete account -->
+                                    <button type="button" class="btn btn-link p-0 delete-account-link text-danger"
+                                        data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
                                         <span class="me-2">
                                             <img src="./images/icons/profile-delete.svg" alt="" width="18"
                                                 height="18" />
@@ -416,6 +424,125 @@
                                     </button>
                                 </form>
                             </div>
+
+                            <!-- Change Password Modal -->
+                            <div class="modal fade change-password-modal" id="changePasswordModal" tabindex="-1"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content border-0 rounded-4">
+                                        <div class="modal-header border-0 pb-0">
+                                            <h5 class="modal-title fw-semibold">Change password</h5>
+                                        </div>
+
+                                        <div class="modal-body pt-3">
+                                            <form>
+                                                <!-- Current password -->
+                                                <div class="mb-3">
+                                                    <label class="form-label fw-medium">Current password</label>
+                                                    <div class="position-relative">
+                                                        <input type="password" class="form-control password-input"
+                                                            placeholder="Password" />
+                                                        <span class="password-eye">
+                                                            <i class="fa-regular fa-eye"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <!-- New password -->
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label fw-medium">New password</label>
+                                                        <div class="position-relative">
+                                                            <input type="password" class="form-control  password-input"
+                                                                placeholder="Password" />
+                                                            <span class="password-eye">
+                                                                <i class="fa-regular fa-eye"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- New password again -->
+                                                    <div class="col-md-6 mb-3">
+                                                        <label class="form-label fw-medium">New password
+                                                            again</label>
+                                                        <div class="position-relative">
+                                                            <input type="password" class="form-control  password-input"
+                                                                placeholder="Password" />
+                                                            <span class="password-eye">
+                                                                <i class="fa-regular fa-eye"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Save button -->
+                                                <button type="submit" class="btn btn-save w-100 mt-2">
+                                                    Save changes
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Change Password Modal -->
+
+
+                            <!-- Delete Account Modal -->
+                            <div class="modal fade delete-account-modal" id="deleteAccountModal" tabindex="-1"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg p-0">
+                                    <div class="modal-content border-0 rounded-4">
+                                        <div class="modal-header border-0 pb-0">
+                                            <h5 class="modal-title fw-semibold" style="font-size: 14px;" >Delete account</h5>
+                                        </div>
+
+                                        <div class="modal-body pt-3">
+                                            <!-- Notice text -->
+                                            <p class="mb-1 text-muted small">
+                                                To delete your account you need to verify yourself by entering your
+                                                password.
+                                            </p>
+                                            <p class="mb-4 small">
+                                                <span style="color: rgba(255, 119, 0, 1);"
+                                                    class="fw-semibold">Notice:</span>
+                                                <span class="ms-1">
+                                                    You need to know that you
+                                                    <span style="color: rgba(224, 52, 44, 1);"
+                                                        class=" fw-semibold">won’t</span>
+                                                    be able to <span style="color: rgba(74, 74, 74, 1)"
+                                                        class="fw-semibold">access</span> any of your data
+                                                    again.
+                                                </span>
+                                            </p>
+
+                                            <form>
+                                                <!-- Password -->
+                                                <div class="mb-3 delete-account-form">
+                                                    <label class="form-label fw-medium">Password</label>
+                                                    <div class="position-relative w-50">
+                                                        <input type="password"
+                                                            class="form-control  delete-password-input"
+                                                            placeholder="Password" />
+                                                        <span class="delete-password-eye">
+                                                            <i class="fa-regular fa-eye"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Delete button -->
+                                                <button type="submit" class="btn btn-delete-account w-100 mt-3">
+                                                    Delete account
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Delete Account Modal -->
+
+
+
+
 
                             <!-- LOCATION PANEL -->
                             <div class="tab-pane fade" id="location-panel" role="tabpanel"
@@ -529,6 +656,32 @@
 
     <!-- Swiper JS -->
     <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- Password visibility toggle script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all password eye elements
+            const passwordEyes = document.querySelectorAll('.password-eye');
+
+            passwordEyes.forEach(function (eye) {
+                eye.addEventListener('click', function () {
+                    const passwordInput = this.previousElementSibling;
+                    const icon = this.querySelector('i');
+
+                    // Toggle password visibility
+                    if (passwordInput.type === 'password') {
+                        passwordInput.type = 'text';
+                        icon.classList.remove('fa-regular', 'fa-eye');
+                        icon.classList.add('fa-regular', 'fa-eye-slash');
+                    } else {
+                        passwordInput.type = 'password';
+                        icon.classList.remove('fa-regular', 'fa-eye-slash');
+                        icon.classList.add('fa-regular', 'fa-eye');
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="./js/lang-script.js"></script>
 </body>

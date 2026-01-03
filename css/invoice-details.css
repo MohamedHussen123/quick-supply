@@ -1,6 +1,6 @@
 :root {
   --main-bg: #09232d;
-  --accent: #f3a622; /* لون اللينك النشط */
+  --accent: #f3a622; 
   --text-muted-top: #c3d1d7;
   --font-public-sans: "Public Sans", sans-serif;
   --poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
